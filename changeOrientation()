@@ -1,0 +1,80 @@
+function changeOrientation() {
+ 
+var k =0.9 ; // k control height 1 is for full screen, 0.9 shorten etc
+var kepub =0.9 ;
+// check platform for Apps
+try {
+  var iOSapp =  (typeof parent.device != 'undefined' && parent.device.platform == "iOS");
+  var Androidapp = (typeof parent.device != 'undefined' && parent.device.platform == "Android");
+} catch(e) {
+  var iOSapp = false;
+  var Androidapp = false;
+}
+// check platform for web browsers
+var iOS =/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+var iPad =/iPad/.test(navigator.userAgent) && !window.MSStream;
+var iPhone = /iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+var Android= /Android|android/i.test(navigator.userAgent);
+
+//navigator
+var Firefox = navigator.userAgent.indexOf("Firefox") != -1;
+ 
+switch (window.orientation) {
+  case 0:
+  case 180:
+    this.screenOrientation = 'portrait';
+    if (iOSapp){ // does not seems to work
+      
+      return window.screen.height*k;  //0.1 for app and 0.1 for nonfullscreenapp  
+    
+    }
+    else if (_isEPub){ // does not seems to work
+      //   return Math.max(window.screen.width,window.screen.height)*0.9;
+      return window.innerHeight*kepub;  //0.1 for app and 0.1 for nonfullscreenapp  
+      // return window.screen.height;
+      //  return window.innerHeight;
+      // return document.documentElement.clientHeight;
+    }
+   
+    else {
+     
+      return 100*k+"vh";
+    }
+    break;
+  case 90:
+  case -90:
+    this.screenOrientation = 'landscape';
+ 
+    if (iOSapp){ // App
+      return window.screen.width*k;  
+      // return window.screen.height;
+      //  return window.innerHeight;
+      //  return document.documentElement.clientHeight;
+    }
+    else if (_isEPub){ // does not seems to work
+      //   return Math.max(window.screen.width,window.screen.height)*0.9;
+      return window.innerHeight*kepub;  //0.1 for app and 0.1 for nonfullscreenapp  
+      // return window.screen.height;
+      //  return window.innerHeight;
+      // return document.documentElement.clientHeight;
+    }
+   
+    else {
+      return 100*k+"vh";
+      }
+    break;
+  default:
+    this.screenOrientation = 'unknown';
+    //       return (iPad)?""+(window.screen.width+window.screen.height)*0.4:((iPhone)?""+window.screen.width:_view._format(window.innerHeight*0.9,"0"));
+     if (Firefox){
+      return window.innerHeight*k;
+      }
+      
+      else {
+        return 100*k+"vh";
+}
+
+}
+ 
+}
+ 
