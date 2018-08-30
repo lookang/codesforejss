@@ -67,11 +67,12 @@ switch (window.orientation) {
     this.screenOrientation = 'unknown';
     //       return (iPad)?""+(window.screen.width+window.screen.height)*0.4:((iPhone)?""+window.screen.width:_view._format(window.innerHeight*0.9,"0"));
      if (Firefox){
-      return window.innerHeight*k;
+      return window.innerHeight*k;// number
       }
       
       else {
-        return 100*k+"vh";
+        return 100*k+"vh"; // string
+        //console.log('hello');
 }
 
 }
