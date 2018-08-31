@@ -1,6 +1,7 @@
 // code to be copied to EJSS source code under Custom and used in drawingPanel3D and plottingPanel2D
 // address the problem is height difference is iOS app , epub, and Firefox
 // user need to change only k and kepub
+// copy %changeOrientation()% into the Height Field of drawingPanel3D and plottingPanel2D
 function changeOrientation() {
  
 var k =0.9 ; // k control height 1 is for full screen, 0.9 shorten etc
