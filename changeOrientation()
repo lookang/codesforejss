@@ -1,9 +1,12 @@
+// code to be copied to EJSS source code under Custom and used in drawingPanel3D and plottingPanel2D
+// address the problem is height difference is iOS app , epub, and Firefox
+// user need to change only k and kepub
 function changeOrientation() {
  
 var k =0.9 ; // k control height 1 is for full screen, 0.9 shorten etc
 var kepub =0.9 ;
 // check platform for Apps
-try {
+try { // allow code to run in Student Learning Space 
   var iOSapp =  (typeof parent.device != 'undefined' && parent.device.platform == "iOS");
   var Androidapp = (typeof parent.device != 'undefined' && parent.device.platform == "Android");
 } catch(e) {
@@ -19,7 +22,7 @@ var Android= /Android|android/i.test(navigator.userAgent);
 //navigator
 var Firefox = navigator.userAgent.indexOf("Firefox") != -1;
  
-switch (window.orientation) {
+switch (window.orientation) { // using window.orientation as deciding factor
   case 0:
   case 180:
     this.screenOrientation = 'portrait';
@@ -67,11 +70,11 @@ switch (window.orientation) {
     this.screenOrientation = 'unknown';
     //       return (iPad)?""+(window.screen.width+window.screen.height)*0.4:((iPhone)?""+window.screen.width:_view._format(window.innerHeight*0.9,"0"));
      if (Firefox){
-      return window.innerHeight*k;// number
+      return window.innerHeight*k;// number as of 20180831 Firefox does not support vh yet so need a separate line to handle
       }
       
       else {
-        return 100*k+"vh"; // string
+        return 100*k+"vh"; // string every other solid deployment, Android Android App web chrome etc
         //console.log('hello');
 }
 
