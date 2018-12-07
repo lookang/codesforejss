@@ -4,8 +4,9 @@
 // copy %changeOrientation()% into the Height Field of drawingPanel3D and plottingPanel2D
 function changeOrientation() {
  
-var k =0.9 ; // k control height 1 is for full screen, 0.9 shorten etc
-var kepub =0.9 ;
+var k =1 ; // k control height 1 is for full screen, 0.9 shorten etc
+var kapple =0.95 // control apple app height
+var kepub =0.95 ;
 // check platform for Apps
 try { // allow code to run in Student Learning Space 
   var iOSapp =  (typeof parent.device != 'undefined' && parent.device.platform == "iOS");
@@ -29,7 +30,7 @@ switch (window.orientation) { // using window.orientation as deciding factor
     this.screenOrientation = 'portrait';
     if (iOSapp){ // does not seems to work
       
-      return window.screen.height*k;  //0.1 for app and 0.1 for nonfullscreenapp  
+      return window.screen.height*kapple;  //0.1 for app and 0.1 for nonfullscreenapp  
     
     }
     else if (_isEPub){ // does not seems to work
@@ -50,7 +51,7 @@ switch (window.orientation) { // using window.orientation as deciding factor
     this.screenOrientation = 'landscape';
  
     if (iOSapp){ // App
-      return window.screen.width*k;  
+      return window.screen.width*kapple;  
       // return window.screen.height;
       //  return window.innerHeight;
       //  return document.documentElement.clientHeight;
@@ -82,4 +83,3 @@ switch (window.orientation) { // using window.orientation as deciding factor
 }
  
 }
- 
