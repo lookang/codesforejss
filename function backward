@@ -1,0 +1,5 @@
+function backward () {
+ dt=-dt; // set to negative dt
+ _step(); // move by one step
+ dt=-dt; // set back to original positive
+}
