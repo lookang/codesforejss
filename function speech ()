@@ -11,7 +11,7 @@ if(parent.cordova) { // check it is running in Android or iOS
     var msg = new SpeechSynthesisUtterance(K1fcorrect);
 //https://www.w3schools.com/tags/ref_language_codes.asp
 // refer to this for all language codes
- //   msg.lang = 'en'; // for english language when ebaled, a female voice is used. perfer to be default voice
+ //   msg.lang = 'en'; // for english language when enabled, a female voice is used. perfer to be default voice
  //   msg.lang = 'zh'; // for chinese language
   //  msg.lang = 'ms'; // for malay language // didnt work on 20181213
 //  msg.lang = 'th'; // for thai language
