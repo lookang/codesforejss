@@ -1,0 +1,9 @@
+// undefined is copy in initialization as a clever way to remember user selection
+// declare variables required
+// firsttime2
+
+
+  if (firsttime2==undefined){
+  firsttime2=true;
+  }
+  
