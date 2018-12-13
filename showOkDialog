@@ -1,0 +1,11 @@
+// define a variable firsttime2 in the variable page and set it to blank
+//paste code inside initialization page.
+// change the text inside
+
+
+if (firsttime2==true){ // run first time, used together with the codes from undefined
+//alert("drag the green (Spindle or Ratchet) \n to measure length");
+ EJSS_INTERFACE.BoxPanel.showOkDialog("drag the (Spindle or Ratchet) to measure length");
+ 
+firsttime2=false; // turn off and remembers due to undefined
+}
