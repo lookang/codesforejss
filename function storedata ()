@@ -1,0 +1,11 @@
+// declare memorycolor = 0; in the variable page
+// declare t = 0 ; in the variable page
+
+function storedata () {
+  _view.Trail.newSegment(); //assume the default name Trail is used
+memorycolory=memorycolory+1; // change color to next number
+
+t=0; //reset back to zero time
+
+
+}
