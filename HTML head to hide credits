@@ -1,0 +1,4 @@
+//paste this into the information tab- HTML head of the run options
+<style type="text/css">
+.metadata { display: none; }
+</style>
