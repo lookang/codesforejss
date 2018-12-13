@@ -1,0 +1,12 @@
+// a quick way to draw polygon
+
+//paste this inside PointX of a polygon shape in the HtmlView
+//8 points
+[0,1,Math.cos(cta/8),Math.cos(cta/4),Math.cos(cta*3/8),Math.cos(cta/2),Math.cos(cta*5/8),Math.cos(cta*3/4),Math.cos(cta*7/8),Math.cos(cta)]
+//paste this inside PointY of a polygon shape in the HtmlView
+[0,0,Math.sin(cta/8),Math.sin(cta/4),Math.sin(cta*3/8),Math.sin(cta/2),Math.sin(cta*5/8),Math.sin(cta*3/4),Math.sin(cta*7/8),Math.sin(cta)]
+
+
+// 16 points
+[0,1, Math.cos(cta/16),Math.cos(cta/8), Math.cos(cta*3/16),Math.cos(cta/4), Math.cos(cta*5/16),Math.cos(cta*3/8), Math.cos(cta*7/16),Math.cos(cta/2), Math.cos(cta*9/16),Math.cos(cta*5/8), Math.cos(cta*11/16),Math.cos(cta*3/4), Math.cos(cta*13/16),Math.cos(cta*7/8), Math.cos(cta*15/16),Math.cos(cta)]
+[0,0, Math.sin(cta/16),Math.sin(cta/8), Math.sin(cta*3/16),Math.sin(cta/4), Math.sin(cta*5/16),Math.sin(cta*3/8), Math.sin(cta*7/16),Math.sin(cta/2), Math.sin(cta*9/16),Math.sin(cta*5/8), Math.sin(cta*11/16),Math.sin(cta*3/4), Math.sin(cta*13/16),Math.sin(cta*7/8), Math.sin(cta*15/16),Math.sin(cta)]
