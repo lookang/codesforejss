@@ -2,6 +2,7 @@ var talk = "2 seconds afterwards another sky diver jumps out and they both fall 
 var favDrink =  prompt(talk); // cause the browser to pop up a dialog box for input that will be evaluated
 var text;
 
+//Method 1 of multi choice Y,N
 switch(favDrink) {
     case "y": // all possible cases of correct answers, 4 strings in this case
     case "Y":
@@ -16,6 +17,27 @@ switch(favDrink) {
         text = "incorrect, observe that there is a constant difference in velocity evident from the velocity vs time plot. .";
         break;
    
+    default:
+        text = "I have never heard of that one..";
+        break;
+}
+
+//Method 2 of multi choice A,B,C
+var favDrink =  prompt(talk);
+var text;
+switch(favDrink) {
+    case "a":
+    case "A":
+        text = "incorrect, despite being throw upward, eventually when it is reaches the level of the man, it has the same velocity as the ball initially throw down, thus resulting in the same velocity just before hitting the ground";
+        break;
+    case "b":
+    case "B":
+        text = "incorrect, despite being throw downward, the velocity just before hitting the ground is same as the ball that was throw up initially";
+        break;
+    case "c":
+    case "C":
+        text = "Excellent choice!  observe that the velocity just before hitting the ground is the same, an easy way to figure this out is conservation of energy";
+       break;
     default:
         text = "I have never heard of that one..";
         break;
