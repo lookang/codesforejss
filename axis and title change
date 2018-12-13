@@ -1,8 +1,6 @@
 // must sure HtmlView has the plottingPanel as default anme
 // paste the codes into the Initialization to move the axes and title manually say to the centre
 
-
-
 _view.plottingPanel.getAxisX().setPosition([0,0.5]);
 //_view.plottingPanel.getTitleX().setPosition([0.95,0.5]);
 
@@ -13,6 +11,7 @@ _view.plottingPanel.getAxisY().setPosition([0.5,0]);
 // but when the simulation runs, need a different way to force the axes and title to be on the correct position so copy this
 // must sure the plottingPanel - Axes - XFixedTick is set to 0
 // must sure the plottingPanel - Axes - YFixedTick is set to 0, if 0 is the fix tick
+// paste this in FIXED RELATIONS 
 
 if (_model.isPlaying()==true) { //NEED this for conflict with initialize page values
 _view.plottingPanel.getAxisX().setAbsoluteY(_view.plottingPanel.getGrid().getFixedTickY());
