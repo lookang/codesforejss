@@ -1,0 +1,22 @@
+var talk = "2 seconds afterwards another sky diver jumps out and they both fall along the same vertical line. Ignore air resistance so that both sky divers fall with the same acceleration. A) Does the difference in their speeds stay the same throughout the fall? Y/N";
+var favDrink =  prompt(talk); // cause the browser to pop up a dialog box for input that will be evaluated
+var text;
+
+switch(favDrink) {
+    case "y": // all possible cases of correct answers, 4 strings in this case
+    case "Y":
+    case "Yes":
+    case "YES":
+        text = "Excellent choice! it is indeed a constant difference in velocity as evident from the same gap in the velocity vs time plot.";
+        break;
+    case "n": // all possible cases of No answers, 4 strings in this case
+    case "N":
+    case "no":
+    case "No":
+        text = "incorrect, observe that there is a constant difference in velocity evident from the velocity vs time plot. .";
+        break;
+   
+    default:
+        text = "I have never heard of that one..";
+        break;
+}
