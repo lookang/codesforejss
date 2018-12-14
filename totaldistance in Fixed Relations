@@ -4,8 +4,10 @@
 // declare totaldistance in variables, total distance to be calculated
 // declare x in variables, instantaneous position
 // declare dx in variables, delta position, change in position
+// declare averagespeed
 
 if (t>0){ // to start adding only after t>0
 dx = x-xo;
 totaldistance = totaldistance+Math.abs(dx);
 }
+averagespeed = totaldistance/t;
