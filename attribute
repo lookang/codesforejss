@@ -1,0 +1,2 @@
+// copy this into the Attribute of the HtmlView Element
+{ "stroke-dasharray":"8 8 8 8" } 
