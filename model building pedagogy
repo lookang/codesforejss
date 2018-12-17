@@ -1,0 +1,30 @@
+//variables
+//xmodel
+//t
+//FunctionY
+//showmodel 
+
+//Fixed relations
+xmodel=_view.fField.evaluate({ t : t, x : xmodel }); 
+
+//HtmlView
+// add a FunctionField called it fField
+//value == functionY
+
+// element add ComboBox called it model2
+// copy this into OnChange
+showmodel=true;
+var opts = _view.models2.getProperty("SelectedOptions");  // array of options
+    var option = (opts.length > 0)? opts[0]:""; // selected option 
+
+functionY=option+"";
+xmodel=_view.fField.evaluate({ t : t, x : xmodel }); 
+if (option=="show me"){
+  if (_view.comboBox.getProperty("SelectedOptions")=="ConcepTest 6 3") {
+  functionY=  "if(t<3,-18.00+6.00*t ,-22.5+9*t-0.5*t^2)";
+    }
+    else {
+functionY= _view._format(xs,"0.00")+"+"+_view._format(vs,"0.00")+"*t + 0.5*" +_view._format(a,"0.00")+"*t^2";  
+  }
+  }
+_view._update();
