@@ -1,7 +1,7 @@
 // copy this into the initialization
 // make the font bigger
 
-_view.plottingPanel.getMessageDecoration("TL").getFont().setFontSize("2vw");
-_view.plottingPanel.getMessageDecoration("TR").getFont().setFontSize("2vw");
-_view.plottingPanel.getMessageDecoration("BL").getFont().setFontSize("2vw");
-_view.plottingPanel.getMessageDecoration("BR").getFont().setFontSize("2vw");
+_view.plottingPanel.getMessageDecoration("TL").getFont().setFontSize("1vw");
+_view.plottingPanel.getMessageDecoration("TR").getFont().setFontSize("1vw");
+_view.plottingPanel.getMessageDecoration("BL").getFont().setFontSize("1vw");
+_view.plottingPanel.getMessageDecoration("BR").getFont().setFontSize("1vw");
