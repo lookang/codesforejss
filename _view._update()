@@ -1,0 +1,3 @@
+//sometime ejss view need to force update
+
+_view._update();
