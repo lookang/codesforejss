@@ -1,13 +1,18 @@
 // copy this custom function
 function speech (K1fcorrect) {
 
-
-if(parent.cordova) { // check it is running in Android or iOS
+try { // allow code to run in Student Learning Space 
+var parent = parent.cordova;
+if(parent) { // check it is running in Android or iOS
         parent.TTS.speak(K1fcorrect, function () {          
         }, function (reason) {          
         });
     }
-    else {
+    }
+    catch(e) {
+      var parent=false;
+      
+      // {
     var msg = new SpeechSynthesisUtterance(K1fcorrect);
 //https://www.w3schools.com/tags/ref_language_codes.asp
 // refer to this for all language codes
@@ -17,6 +22,10 @@ if(parent.cordova) { // check it is running in Android or iOS
 //  msg.lang = 'th'; // for thai language
 //  msg.lang = 'id'; // for indonesia 
 window.speechSynthesis.speak(msg);
+      //}   
+      
+      
       }
+ 
 
 }
