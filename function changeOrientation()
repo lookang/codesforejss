@@ -4,7 +4,7 @@
 // copy %changeOrientation()% into the Height Field of drawingPanel3D and plottingPanel2D
 function changeOrientation() {
  
-var k =1 ; // k control height 1 is for full screen, 0.9 shorten etc
+var k =0.99 ; // k control height 1 is for full screen, 0.9 shorten etc
 var kapple =0.95 // control apple app height
 var kepub =0.95 ;
 // check platform for Apps
