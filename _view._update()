@@ -1,3 +1,6 @@
 //sometime ejss view need to force update
 
 _view._update();
+
+//alternate
+_update();
