@@ -1,0 +1,74 @@
+// in the elements drag and add acclerometer element
+//Accelerometer provides access to the built-in accelerometer (if present).
+//Usage
+//To add the Accelerometer element to your model, drag the icon element to the list of your model elements.
+//The element implements the following basic methods:
+//boolean isPresent(): whether the hardware includes an accelerometer
+//void start(): turns the accelerometer on
+//void stop(): turns the accelerometer off
+//boolean isRunning(): whether reading accelerometer data has been started (using start())
+//Object getDeviceData(): reads the raw data (in the device reference frame) of the acceleration measured (including gravity) and the rotation of the device. The object has x,y,z components for the acceleration, and alpha,beta,gamma for the rotation. The values are all zero if the accelerometer is not present or has not been started.
+//Object getViewData(): returns a similar same object as getDeviceData(), but the acceleration is in the user's view reference frame (which has the X and Y axes horizontal and vertical on the screen and Z perpendicular to it). This function take scare of orientation changes of the screen and also differences among operating systems.
+/*
+
+
+//to add variables
+//devicePresent set to true boolean;
+//accX set to 0
+//accY set to -g
+//accZ set to 0
+//msg set to "message"
+
+//initialization
+devicePresent=accelerometer.isPresent(); 
+// to get duo usage incase no accelerometer
+if (devicePresent){
+  msg="Use Run button \nto access accelerometer."
+   accelerometer.start();
+accelerometer.setAverageInterval(0.1);
+//alert("Accelerometer is detected, enjoy tilting your phone, optimised(lock) for landscape view. \nEnjoy! This toy can be used to experience effects of driving frequency (rate of tilting phone) on the spring-mass system oscillation.");
+//alert("x= "+x+" , vx= "+vx);
+}
+else if (!devicePresent) {
+  alert("Accelerometer is not present." );
+  msg="Accelerometer is not present. \nUse slider to simulate tilt."
+  accX=0;
+  accY=-g;
+
+}
+
+//Evolution
+  if (devicePresent) {
+  var viewData = accelerometer.getViewData();
+  accX = viewData.x;
+  accY = viewData.y;
+  accZ = viewData.z;
+ // console.log(accX,accY,accZ);
+  //Assume sensor is not present if all componets are zero
+  devicePresent=viewData.x||viewData.y||viewData.z; // need this line to avoid error
+  msg=devicePresent?"":"Accelerometer not present. Use slider to simulate tilt.";
+
+ accelerometer.start();
+accelerometer.setAverageInterval(0.1);
+
+// put in the physics based on accelerometer data
+theta=0; // don't use slider
+  phi=-Math.atan2(accX,-accY); // new lookang for tilt to show correctly
+ // phi=Math.atan2(accX,-accY); //older code wolfgang
+}
+else{  // sensor not active
+// put in the physics of simulation model
+phi=0; // angle of tilt of device
+  accX=-g*Math.sin(theta);
+  accY=-g*Math.cos(theta);
+}
+
+//Fixed relations
+tilt=theta+phi;
+if(!devicePresent ){  // no device mode
+  phi=0;
+  accX=-g*Math.sin(tilt);
+  accY=-g*Math.cos(tilt);
+ // display="block";
+}
+
