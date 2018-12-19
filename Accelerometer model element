@@ -38,7 +38,9 @@ else if (!devicePresent) {
 }
 
 //Evolution
-  if (devicePresent) {
+
+  
+ if (accelerometer.isPresent()||display=="block") { // if display=="block" dont take data from phone
   var viewData = accelerometer.getViewData();
   accX = viewData.x;
   accY = viewData.y;
@@ -48,10 +50,17 @@ else if (!devicePresent) {
   devicePresent=viewData.x||viewData.y||viewData.z; // need this line to avoid error
   msg=devicePresent?"":"Accelerometer not present. Use slider to simulate tilt.";
 
- accelerometer.start();
+}
+
+
+if (devicePresent) { // sensor active based to line 48  devicePresent=viewData.x||viewData.y||viewData.z; // need this line to avoid error
+  accelerometer.start();
 accelerometer.setAverageInterval(0.1);
+//alert("3="+x);
+  }
 
 // put in the physics based on accelerometer data
+if(devicePresent){ // sensor active based to line 48  devicePresent=viewData.x||viewData.y||viewData.z; // need this line to avoid error
 theta=0; // don't use slider
   phi=-Math.atan2(accX,-accY); // new lookang for tilt to show correctly
  // phi=Math.atan2(accX,-accY); //older code wolfgang
