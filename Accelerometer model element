@@ -1,4 +1,4 @@
-// in the elements drag and add acclerometer element
+// in the elements drag and add accelerometer element
 //Accelerometer provides access to the built-in accelerometer (if present).
 //Usage
 //To add the Accelerometer element to your model, drag the icon element to the list of your model elements.
