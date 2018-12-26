@@ -1,0 +1,13 @@
+function randomColor() {
+for (var i=0; i<n /* Iterations */ ; i++) {
+ red = Math.floor(256*Math.random());
+ green = Math.floor(256*Math.random());
+ blue = Math.floor(256*Math.random());
+
+// color[i] = "rgba("+red+","+green+","+blue+","+Math.random()+")";
+ color[i] = "rgba("+red+","+green+","+blue+","+1+")";
+
+ 
+}
+
+}
