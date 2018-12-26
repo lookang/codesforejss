@@ -1,0 +1,20 @@
+//https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+function random_elems(arr, count) {
+  let len = arr.length;
+  let lookup = {};
+  let tmp = [];
+
+  if (count > len)
+    count = len;
+
+  for (let i = 0; i < count; i++) {
+    let index;
+    do {
+      index = ~~(Math.random() * len);
+    } while (index in lookup);
+    lookup[index] = null;
+    tmp.push(arr[index]);
+  }
+
+  return tmp;
+}
