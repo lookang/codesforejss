@@ -1,0 +1,15 @@
+// to add comboBox that works and does not jam up the simulation when selected and simulation is running
+// options = ["N₀ =100","N₀ =4","N₀ =9","N₀ =16","N₀ =25","N₀ =36","N₀ =49","N₀ =64","N₀ =81","N₀ =121","N₀ =144","N₀ =169","N₀ =225","N₀ =289","N₀ =324","N₀ =361","N₀ =400","N₀ =1024","N₀ =1600","N₀ =2500"]
+// OnChange
+//var opts = _view.comboBox.getProperty("SelectedOptions");  // array of options
+    var option = (opts.length > 0)? opts[0]:""; // selected option 
+
+
+if ( option=="user_defined"){
+  
+  }
+else if ( option=="N₀ =4"){
+  ni=2;
+  fontdice ="normal normal 4vw ";
+  }
+ 
