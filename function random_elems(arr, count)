@@ -1,4 +1,11 @@
 //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+//variables
+//answerstring = ["老师","允许","我们","提早","回家","休息"]
+//numberofcorrect = answerstring.length
+// possible usage
+// answerstringrandom = random_elems(answerstring,numberofcorrect); 
+
+
 function random_elems(arr, count) {
   let len = arr.length;
   let lookup = {};
