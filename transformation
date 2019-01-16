@@ -4,3 +4,9 @@
 // a = reflect about y axis, 1 is default, 0 is nothing, -1 is reflect 
 // b = 
 [-1,0,0,1,0,0] 
+
+
+//in 3D
+//[[angle,x axis,0,0],[angle Y,0,axis y,0],[angle Z,0,0,axis Z]]
+[[0,1,0,0],[pi/2,0,1,0],[0,0,0,1]]
+
