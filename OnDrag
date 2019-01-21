@@ -7,3 +7,31 @@ x = Math.round(_info.point[0]/5)*5; // round to nearest 5
 x = Math.round(_info.point[0]/10)*10; // round to nearest 10
 var y;
 y = Math.round(_info.point[1]/10)*10; // round to nearest 10
+
+
+// for limiting rage of zoom
+//_view.plottingPanel.setProperty("MinimumY",-0.35);
+//_view.plottingPanel.setProperty("MaximumY",0.65);
+_view.plottingPanel.setProperty("MinimumX",Math.max(_view.plottingPanel.getProperty("MinimumX"),-80));
+_view.plottingPanel.setProperty("MaximumX",Math.min(_view.plottingPanel.getProperty("MaximumX"),80));
+
+_view.plottingPanel.setZoomLimits([10,160]);
+
+
+// copied from Drag to make drag smooth visuals as well like zoom.
+//_view.plottingPanel.getAxisX().setAbsoluteY(_view.plottingPanel.getGrid().getFixedTickY());
+if (_view.plottingPanel.getRealWorldXMax()>1&&_view.plottingPanel.getRealWorldXMax()<10){
+XTickStep=1;
+YTickStep=1;
+//_view.plottingPanel.setYTickStep(1000); // did not work?
+}
+else if (_view.plottingPanel.getRealWorldXMax()<100){
+XTickStep=10;
+YTickStep=10;
+}
+else if (_view.plottingPanel.getRealWorldXMax()<1000){
+XTickStep=100;
+YTickStep=100;
+}
+
+
