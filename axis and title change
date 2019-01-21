@@ -13,11 +13,11 @@ _view.plottingPanel.getAxisY().setPosition([0.5,0]);
 // must sure the plottingPanel - Axes - YFixedTick is set to 0, if 0 is the fix tick
 // paste this in FIXED RELATIONS 
 
-if (_model.isPlaying()==true) { //NEED this for conflict with initialize page values
+if (_model.isPlaying()===true) { //NEED this for conflict with initialize page values
+
 _view.plottingPanel.getAxisX().setAbsoluteY(_view.plottingPanel.getGrid().getFixedTickY());
 _view.plottingPanel.getAxisY().setAbsoluteX(_view.plottingPanel.getGrid().getFixedTickX());
-
-//labels
-//_view.plottingPanel.getTitleX().setPosition([0.9,0.9]);
-//_view.plottingPanel.getTitleX().setPosition([0.9,0.5]);
+_view.plottingPanel.getTitleX().setAbsoluteY(_view.plottingPanel.getGrid().getFixedTickY());
+_view.plottingPanel.getTitleY().setAbsoluteX(_view.plottingPanel.getGrid().getFixedTickX());
 }
+
