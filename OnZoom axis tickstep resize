@@ -1,0 +1,27 @@
+//variables add 
+// XTickStep
+// YTickStep
+
+//properties of plottingPanel add to XTickStep and YTickStep
+// XTickStep field add XTickStep
+// YTickStep field add YTickStep
+
+//in the OnZoom
+if (_view.plottingPanel.getRealWorldXMax()>1&&_view.plottingPanel.getRealWorldXMax()<10){
+XTickStep=1;
+YTickStep=1;
+//_view.plottingPanel.getAxisX().setTickStep(1); // did not work?
+//_view.plottingPanel.getAxisY().setTickStep(1); 
+}
+else if (_view.plottingPanel.getRealWorldXMax()<100){
+XTickStep=10;
+YTickStep=10;
+//_view.plottingPanel.getAxisX().setTickStep(10); // did not work?
+//_view.plottingPanel.getAxisY().setTickStep(10); 
+}
+else if (_view.plottingPanel.getRealWorldXMax()<1000){
+XTickStep=100;
+YTickStep=100;
+//_view.plottingPanel.getAxisX().setTickStep(100); // did not work?
+//_view.plottingPanel.getAxisY().setTickStep(100); 
+}
