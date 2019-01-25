@@ -1,0 +1,9 @@
+// sometimes the play pause button can be small on mobile, add this code to the plottingPanel for new functionality
+
+
+if (_isPlaying){
+  _pause();
+  }
+  else if (_isPaused){
+    _play();
+    }
