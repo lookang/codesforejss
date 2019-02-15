@@ -76,9 +76,9 @@ switch (window.orientation) { // using window.orientation as deciding factor
       }
       
       else {
-        return 100*k+"vh"; // string every other solid deployment, Android Android App web chrome etc works in EJSS6.0beta
+      //  return 100*k+"vh"; // string every other solid deployment, Android Android App web chrome etc works in EJSS6.0beta
         //  works in EjsS_5.3_180131
-        //window.innerHeight*k;
+        window.innerHeight*k; // work on Chrome mobile
 }
 
 }
