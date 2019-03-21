@@ -74,11 +74,18 @@ switch (window.orientation) { // using window.orientation as deciding factor
      if (Firefox){
       return window.innerHeight*k;// number as of 20180831 Firefox does not support vh yet so need a separate line to handle
       }
-      
+   //   else if (iOS&&(window.orientation==0)||(window.orientation==180)){
+   //   return  window.screen.height*k;// number as of 20180831 Firefox does not support vh yet so need a separate line to handle
+   //   }
+    //  else if (iOS&&(window.orientation==90)||(window.orientation==-90)){
+   //   return  window.screen.width*k;// number as of 20180831 Firefox does not support vh yet so need a separate line to handle
+   //   }
       else {
-      //  return 100*k+"vh"; // string every other solid deployment, Android Android App web chrome etc works in EJSS6.0beta
+     //  alert();
+       return 100*k+"%"; // string every other solid deployment, Android Android App web chrome etc works in EJSS6.0beta
         //  works in EjsS_5.3_180131
-        window.innerHeight*k; // work on Chrome mobile
+      //  window.innerHeight*k; // work on Chrome mobile
+       
 }
 
 }
