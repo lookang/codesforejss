@@ -4,9 +4,9 @@
 // copy %changeOrientation()% into the Height Field of drawingPanel3D and plottingPanel2D
 function changeOrientation() {
  
-var k =0.99 ; // k control height 1 is for full screen, 0.9 shorten etc
-var kapple =0.95 // control apple app height
-var kepub =0.95 ;
+var k =0.90 ; // k control height 1 is for full screen, 0.9 shorten etc
+var kapple =0.90 // control apple app height
+var kepub =0.90 ;
 // check platform for Apps
 try { // allow code to run in Student Learning Space 
   var iOSapp =  (typeof parent.device != 'undefined' && parent.device.platform == "iOS");
@@ -81,10 +81,10 @@ switch (window.orientation) { // using window.orientation as deciding factor
    //   return  window.screen.width*k;// number as of 20180831 Firefox does not support vh yet so need a separate line to handle
    //   }
       else {
-     //  alert();
-       return 100*k+"%"; // string every other solid deployment, Android Android App web chrome etc works in EJSS6.0beta
+      //alert();
+      // return 100*k+"%"; // work on fullscreen works in EJSS6.0beta
         //  works in EjsS_5.3_180131
-      //  window.innerHeight*k; // work on Chrome mobile
+      return  window.innerHeight*k; // work on panel 
        
 }
 
