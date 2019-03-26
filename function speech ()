@@ -21,6 +21,10 @@ if(parent) { // check it is running in Android or iOS
   //  msg.lang = 'ms'; // for malay language // didnt work on 20181213
 //  msg.lang = 'th'; // for thai language
 //  msg.lang = 'id'; // for indonesia 
+//https://flaviocopes.com/speech-synthesis-api/ 
+//msg.lang = 'en-US'; // English (United States)
+//msg.lang = 'zh-CN'; // Chinese (China)
+
 window.speechSynthesis.speak(msg);
       //}   
       
