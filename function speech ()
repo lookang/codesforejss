@@ -23,8 +23,15 @@ if(parent) { // check it is running in Android or iOS
 //  msg.lang = 'id'; // for indonesia 
 //https://flaviocopes.com/speech-synthesis-api/ 
 //msg.lang = 'en-US'; // English (United States)
-//msg.lang = 'zh-CN'; // Chinese (China)
+msg.lang = 'zh-CN'; // Chinese (China)
 
+
+ // Set the attributes.
+	msg.volume = parseFloat(1);
+	msg.rate = parseFloat(1);
+	msg.pitch = parseFloat(1);
+
+msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Ting-Ting'; })[0];
 window.speechSynthesis.speak(msg);
       //}   
       
