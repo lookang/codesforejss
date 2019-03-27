@@ -3,3 +3,7 @@
 <style type="text/css">
 .metadata { display: none; }
 </style>
+
+
+//HTML head to add algebrite
+<script src="https://cdn.jsdelivr.net/npm/algebrite@1.1.2/dist/algebrite.bundle-for-browser.js"></script>
