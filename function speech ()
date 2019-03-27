@@ -1,5 +1,4 @@
 // copy this custom function
-// for speech to work on iOS, it needs to be added on the play button before it can actually work
 function speech (option) {
 
 
@@ -18,9 +17,8 @@ if(parent) { // check it is running in Android or iOS
   // Set the text.
 	//msg.text = option; 
 	//https://forums.developer.apple.com/message/323564#323564
-	//https://codepen.io/lookang/pen/xBNLjw
 msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Ting-Ting'; })[0];
-//msg.lang = 'zh-CH';
+msg.lang = 'zh-CH'; // need for android?
 
 //https://flaviocopes.com/speech-synthesis-api/
 //debug
