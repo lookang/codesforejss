@@ -1,4 +1,5 @@
 // copy this custom function
+// for speech to work on iOS, it needs to be added on the play button before it can actually work
 function speech (option) {
 
 
