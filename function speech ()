@@ -1,4 +1,5 @@
 // copy this custom function
+// in iOS need to add speech to the play button as On iOS the API works but must be triggered by a user action callback, like a response to a tap event, to provide a better experience to users and avoid unexpected sounds out of your phone
 function speech (option) {
 
 
