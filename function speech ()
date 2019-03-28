@@ -6,7 +6,7 @@ function speech (option) {
 try { // allow code to run in Student Learning Space 
 var parent = parent.cordova;
 if(parent) { // check it is running in Android or iOS
-        parent.TTS.speak(K1fcorrect, function () {          
+        parent.TTS.speak(option, function () {          
         }, function (reason) {          
         });
     }
