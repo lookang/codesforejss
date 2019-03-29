@@ -1,6 +1,6 @@
 // in initialization
 // possible usage if x is the array
-shuffleArray(x);
+//shuffleArray(x);
 
 
 //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
