@@ -3,17 +3,13 @@
 function speech (option) {
 
 
-try { // allow code to run in Student Learning Space 
-var parent = parent.cordova;
-if(parent) { // check it is running in Android or iOS
-        parent.TTS.speak(option, function () {          
-        }, function (reason) {          
-        });
-    }
-    }
-    catch(e) {
-      var parent=false;
+// allow code to run in Student Learning Space 
+var isCordova = (!!this.parent.cordova || !!window.cordova);
+if(isCordova) { // check it is running in Android or iOS
+        parent.TTS.speak({text:option,locale:'zh-CN'});
+} else {
   var msg = new SpeechSynthesisUtterance(option);
+
   //https://stackoverflow.com/questions/43983845/speechsynthesis-api-for-chinese-firefox
   // Set the text.
 	//msg.text = option; 
