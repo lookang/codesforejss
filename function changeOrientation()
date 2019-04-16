@@ -42,8 +42,8 @@ switch (window.orientation) { // using window.orientation as deciding factor
     }
    
     else {
-     
-      return 100*k+"vh";
+     return window.innerHeight*k;
+      //return 100*k+"vh";
     }
     break;
   case 90:
@@ -65,7 +65,8 @@ switch (window.orientation) { // using window.orientation as deciding factor
     }
    
     else {
-      return 100*k+"vh";
+      return window.innerHeight*k;
+      //return 100*k+"vh"; // safari produce error
       }
     break;
   default:
