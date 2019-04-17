@@ -6,6 +6,10 @@
 if (firsttime2==true){ // run first time, used together with the codes from undefined
 //alert("drag the green (Spindle or Ratchet) \n to measure length");
  EJSS_INTERFACE.BoxPanel.showOkDialog("drag the (Spindle or Ratchet) to measure length");
- 
+
+document.getElementById(".myBoxPanelOk").style.fontSize = "2vw";
+document.getElementById(".myBoxPanelOk").style.color = "Black";
+document.getElementById(".myBoxPanelOk").style.width = "500px";
+document.getElementById(".myBoxPanelOk").style.left = "40%";
 firsttime2=false; // turn off and remembers due to undefined
 }
