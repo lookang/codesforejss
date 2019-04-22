@@ -2,7 +2,10 @@
 // address the problem is height difference is iOS app , epub, and Firefox
 // user need to change only k and kepub
 // copy %changeOrientation()% into the Height Field of drawingPanel3D and plottingPanel2D
-function changeOrientation() {
+
+// _view.plottingPanel.getGraphics().setHeight(changeOrientation(0.85));
+
+function changeOrientation(kheight) {
  
 var k =0.90 ; // k control height 1 is for full screen, 0.9 shorten etc
 var kapple =0.90 // control apple app height
@@ -42,7 +45,7 @@ switch (window.orientation) { // using window.orientation as deciding factor
     }
    
     else {
-     return window.innerHeight*k;
+     return window.innerHeight*kheight;
       //return 100*k+"vh";
     }
     break;
@@ -65,7 +68,7 @@ switch (window.orientation) { // using window.orientation as deciding factor
     }
    
     else {
-      return window.innerHeight*k;
+      return window.innerHeight*kheight;
       //return 100*k+"vh"; // safari produce error
       }
     break;
@@ -85,7 +88,7 @@ switch (window.orientation) { // using window.orientation as deciding factor
       //alert();
       // return 100*k+"%"; // work on fullscreen works in EJSS6.0beta
         //  works in EjsS_5.3_180131
-      return  window.innerHeight*k; // work on panel 
+      return  window.innerHeight*kheight; // work on panel 
        
 }
 
