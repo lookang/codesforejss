@@ -1,0 +1,6 @@
+// copy this onto the OnZoom of the plottingPanel
+// the name must be plottingPanel or else you need to modify the code below
+// for example if your plottingPanel is called plottingPanel2
+// the code need to be change to _view.plottingPanel2.setZoomLimits([1,10]);
+
+_view.plottingPanel.setZoomLimits([1,10]);
