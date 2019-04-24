@@ -1,0 +1,34 @@
+// add this to the - information about - run options - HTML head
+
+<style>
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
+
+//go to Variables add
+btnCSS
+btnmenushow
+
+//go to Initialization add
+if (btnCSS==undefined){
+  btnCSS={"animation": "blink 1s step-start infinite"};
+  btnmenushow=true;
+  }
+else{
+  btnCSS={"animation": "blink 0s step-start infinite"};
+  btnmenushow=false;
+  }
+  
+ //go to HTMLView - element saybutton - Graphocal Aspect - CSS and add
+ 
+ %btnCSS%
+ 
+ // go to HTMLView - element saybutton - On Properties - OnClick
+ 
+ btnCSS={"animation": "blink 0s step-start infinite"};
+btnmenushow=false;
+ 
+ 
