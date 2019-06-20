@@ -8,7 +8,7 @@
 function changeOrientation(kheight) {
  
 var k =0.90 ; // k control height 1 is for full screen, 0.9 shorten etc
-var kapple =0.90 // control apple app height
+var kapple =kheight // control apple app height
 var kepub =0.90 ;
 // check platform for Apps
 try { // allow code to run in Student Learning Space 
