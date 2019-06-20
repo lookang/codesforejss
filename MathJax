@@ -1,0 +1,17 @@
+// goto Initialization and paste this if the MathJax is required at first
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+//goto Fixed relations and paste this if the MathJax is required all the time
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+//goto Information about EJSS, HTML head and paste this
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+//in your formula 
+// syntax is "$$ \\frac{}{} $$" for fraction
+formula = "$$ \\frac{"+k.substring(0,k.indexOf("/"))+"}{"+k.substring(k.indexOf("/")+1)+"}    $$";
+
+//display in a panel - Html
+//call the Html formula
+ 
