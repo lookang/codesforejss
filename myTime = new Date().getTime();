@@ -1,0 +1,14 @@
+// how to create a real time
+
+//initialization
+myTime = new Date().getTime();
+
+//evolution
+// reset peaks every 5 seconds
+var now = new Date().getTime();
+var distance = now - myTime;
+if (distance > 5000) {
+  // do your thing here
+  //peakArray = [];
+  myTime = now;
+  }
