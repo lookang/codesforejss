@@ -1,0 +1,8 @@
+// copy this into the CSS of panel with the plotting Panel etc
+
+{
+  "position" : "absolute",
+  "top" : "0%",
+   "margin-left":"0px",
+   "left":"0%"
+}
