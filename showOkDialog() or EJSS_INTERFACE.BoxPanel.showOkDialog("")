@@ -14,3 +14,20 @@ document.getElementById(".myBoxPanelOk").style.left = "40%";
 document.getElementById(".myBoxPanelOk").style.top = "0px";
 firsttime2=false; // turn off and remembers due to undefined
 }
+
+
+// something you want to click then do something
+ EJSS_INTERFACE.BoxPanel.showOkCancelDialog("Cancel/Ok question", 
+    function(){ 
+      alert("ok"); 
+    },
+    function(){ 
+      alert("cancel"); 
+    });
+    
+// comboBox options
+var options = {text: ["hola1", "hola2"], value: ["1","2"]};
+  EJSS_INTERFACE.BoxPanel.showSelectDialog("Selecting", options, 
+    function(s) { 
+      alert(s)
+    }); 
