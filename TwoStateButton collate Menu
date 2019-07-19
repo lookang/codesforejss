@@ -1,0 +1,8 @@
+// create a new 2 state button
+// TextOn = "☰"
+// OnClick  = _view.firstRowPanel.getStyle().setDisplay("block"); // where firstRowPanel is the name of the tab with all the controls 
+// maybe also need to adjust the new resulting plottingPanel height
+// TextOff = "◀"
+// OffClick = _view.firstRowPanel.getStyle().setDisplay("none");
+// CSS = {"position": "fixed", "display": "block", "margin": "5px"}
+
