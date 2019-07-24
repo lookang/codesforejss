@@ -88,7 +88,9 @@ switch (window.orientation) { // using window.orientation as deciding factor
       //alert();
       // return 100*k+"%"; // work on fullscreen works in EJSS6.0beta
         //  works in EjsS_5.3_180131
-      return  window.innerHeight*kheight; // work on panel 
+      //return  window.innerHeight*kheight; // work on panel 
+      // take note the panel that contains the plottingPanel needs to be 100% in Height to maximize the view
+      return 100*k+"vh";
        
 }
 
