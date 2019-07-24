@@ -91,7 +91,7 @@ switch (window.orientation) { // using window.orientation as deciding factor
       //return  window.innerHeight*kheight; // work on panel 
       // take note the panel that contains the plottingPanel needs to be 100% in Height to maximize the view
       return 100*k+"vh";
-       
+       // 100% does not work on iOS after clicking reset it lengthens
 }
 
 }
