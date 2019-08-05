@@ -6,7 +6,8 @@ function speech (option) {
 // allow code to run in Student Learning Space 
 var isCordova = (!!this.parent.cordova || !!window.cordova);
 if(isCordova) { // check it is running in Android or iOS
-        parent.TTS.speak({text:option,locale:'zh-CN'});
+       // parent.TTS.speak({text:option,locale:'zh-CN'});
+	parent.TTS.speak({text:option,locale:'us-EN'});
 	// parent.TTS.speak({text:option,locale:'en-US'});
 } else {
   var msg = new SpeechSynthesisUtterance(option);
@@ -16,8 +17,9 @@ if(isCordova) { // check it is running in Android or iOS
 	//msg.text = option; 
 	//https://forums.developer.apple.com/message/323564#323564
 	// comment out the next 2 lines for english
-msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Ting-Ting'; })[0];
-msg.lang = 'zh-CH'; // need for android?
+//msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Ting-Ting'; })[0];
+//msg.lang = 'zh-CH'; // need for android?
+msg.lang = 'us-EN'; // need for android?
 
 //https://flaviocopes.com/speech-synthesis-api/
 //debug
