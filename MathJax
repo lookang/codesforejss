@@ -5,7 +5,8 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 //goto Information about EJSS, HTML head and paste this
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" async="true"
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 //in your formula 
