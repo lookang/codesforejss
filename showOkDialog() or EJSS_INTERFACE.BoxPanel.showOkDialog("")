@@ -20,6 +20,7 @@ firsttime2=false; // turn off and remembers due to undefined
  EJSS_INTERFACE.BoxPanel.showOkCancelDialog("Cancel/Ok question", 
     function(){ 
       alert("ok"); 
+    _update(); // to force update view
     },
     function(){ 
       alert("cancel"); 
