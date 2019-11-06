@@ -15,6 +15,13 @@ document.getElementById(".myBoxPanelOk").style.top = "0px";
 firsttime2=false; // turn off and remembers due to undefined
 }
 
+// show something
+EJSS_INTERFACE.BoxPanel.showOkDialog("Info message", 
+    function(){ 
+      
+    _update(); // to force update view
+    });
+
 
 // something you want to click then do something
  EJSS_INTERFACE.BoxPanel.showOkCancelDialog("Cancel/Ok question", 
