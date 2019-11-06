@@ -9,6 +9,7 @@ if(isCordova) { // check it is running in Android or iOS
        // parent.TTS.speak({text:option,locale:'zh-CN'});
 	parent.TTS.speak({text:option,locale:'us-EN'});
 	// parent.TTS.speak({text:option,locale:'en-US'});
+	// parent.TTS.speak({text:option,locale:'id-ID'});
 } 
 } 
 catch(e) {
@@ -24,6 +25,7 @@ catch(e) {
 	// comment out the next 2 lines for english
 //msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Ting-Ting'; })[0];
 //msg.lang = 'zh-CH'; // need for android?
+//msg.lang = 'id-ID'; // need for android?
 msg.lang = 'us-EN'; // need for android?
 
 //https://flaviocopes.com/speech-synthesis-api/
