@@ -3,14 +3,19 @@
 function speech (option) {
 
 
-// allow code to run in Student Learning Space 
+try { // allow code to run in Student Learning Space 
 var isCordova = (!!this.parent.cordova || !!window.cordova);
 if(isCordova) { // check it is running in Android or iOS
        // parent.TTS.speak({text:option,locale:'zh-CN'});
 	parent.TTS.speak({text:option,locale:'us-EN'});
 	// parent.TTS.speak({text:option,locale:'en-US'});
-} else {
-  var msg = new SpeechSynthesisUtterance(option);
+} 
+} 
+catch(e) {
+  var isCordova = false;
+  }
+  
+   var msg = new SpeechSynthesisUtterance(option);
 
   //https://stackoverflow.com/questions/43983845/speechsynthesis-api-for-chinese-firefox
   // Set the text.
@@ -31,6 +36,9 @@ msg.lang = 'us-EN'; // need for android?
 
 // Queue this utterance.
 window.speechSynthesis.speak(msg);
-}
+
+
+
+ 
 
 }
