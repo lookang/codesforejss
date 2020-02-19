@@ -3,6 +3,10 @@
 // OnChange
 _view.comboBox.getSelectedOptionsIndexes(); // to get the index of the list on comboBox automatically
 
+// to set
+_view.comboBox.setSelectedOptions(["x vs t"]);
+
+// to use
 var opts = _view.comboBox.getProperty("SelectedOptions");  // array of options
     var option = (opts.length > 0)? opts[0]:""; // selected option 
 if ( option=="user_defined"){
