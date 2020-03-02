@@ -1,5 +1,6 @@
 // copy the code below to the HTML head
 // replace UA-3326007-19 twice with yor own code
+// to add async="true" 
 // visit your own account
 // https://analytics.google.com/analytics/web/#/a3326007p223003208/admin
 
@@ -14,6 +15,8 @@
 
 
 //copy code for Adsense
+// need This page contains the following errors: error on line 14 at column 56: Specification mandates value for attribute async
+// to add async="true" 
 
 </script>
 <script data-ad-client="ca-pub-0121577198857509" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
