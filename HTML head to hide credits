@@ -16,6 +16,40 @@
  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+//copy to initialization page
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+//https://docs.mathjax.org/en/v1.0/options/tex2jax.html#configure-tex2jax
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+  }
+});
+
+//sample code that works on HTML
+
+
+<h2>Pendulum in 3D</h2>
+<p>Let the angle between the pendulum and the vertical line is $\theta$ and the angular velocity $\omega=\frac{d\theta}{dt}$
+and the angle of the pendulum (projected to x-y plane) with the x-axis is  $\phi$, and it's angular velocity $\dot\phi=\frac{d\phi}{dt}$ </p>
+
+<p>The lagrange equation for the system is $L=T-V = \tfrac{1}{2}m (L\dot\theta)^2+\tfrac{1}{2}m (L\sin\theta \dot{\phi})^2- (-mgL\cos\theta)$</p>
+
+
+<p>The equation of the motion is</p>
+
+$$\ddot\theta=\sin\theta\cos\theta\dot{\phi}^2-\frac{g}{L}\sin\theta$$  ...... from $$\frac{d}{dt}(\frac{\partial L}{\partial \dot{\theta}})-\frac{\partial L}{\partial \theta}=0$$
+and
+$$ m L^2 \sin\theta^2 \dot{\phi}=const$$ Angular momentum is conserved. ...... from $$\frac{d}{dt}(\frac{\partial L}{\partial \dot{\phi}})-\frac{\partial L}{\partial \phi}=0$$
+
+<p>And the following is the simulation of such a system:</p>
+<p>When the checkbox ([b]circular loop[/b]) is checked, $\omega=0$. and $\dot{\phi}= \sqrt{\frac{g}{L\cos\theta}}$ It is a circular motion.</p>
+<p>The vertical component tangential of the string balanced with the mass m, and the horizontal component tangential provide the centripetal force for circular motion.</p>
+
+<p>You can uncheck it and change the period $T=\frac{2\pi}{\dot{\phi}}$ ,
+and you will find out the z-coordinate of the pendulum will change with time when
+$\omega\neq 0$ or $\dot{\phi}\neq \sqrt{\frac{g}{L\cos\theta}}$</p>
+
+
 //Add Google Ads
 <script type="text/javascript" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
