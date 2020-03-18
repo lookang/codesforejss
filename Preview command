@@ -1,3 +1,12 @@
+//sometimes maybe after clicking default, the list is missing and cannot be reinstalled back. one solution is to key in line by line back in.
+
+
+
 open -a "Google Chrome" //MacOSX Example
 open -a "Safari" //MacOSX Example
 open -a "FirefoxDeveloperEdition" //MacOSX Example
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" // Windows Example
+"C:\Program Files\Internet Explorer\iexplore.exe" // Windows Example
+"C:\Program Files (x86)\Aurora\firefox.exe" // Windows Example
+google-chrome // Linux Example
+firefox // Linux Example
