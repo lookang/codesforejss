@@ -1,0 +1,7 @@
+// Generate random number between two numbers in JavaScript
+//Where:
+
+//1 is the start number
+//6 is the number of possible results (1 + start (6) - end (1))
+Math.floor(Math.random() * 6) + 1  // number 1 to 6
+Math.floor(Math.random() * 4) + 6 // number 6 to 9
