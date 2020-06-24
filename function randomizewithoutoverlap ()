@@ -14,7 +14,7 @@ for (var i=1; i<n; i++) {
         var d1 = x[j]-x[i];
         var d2 = y[j]-y[i];
         var result = d1*d1+d2*d2-(diameter[i]+diameter[j])*(diameter[i]+diameter[j])/4;
-        if (result<0) { randomize(); return; }
+        if (result<0) { randomizewithoutoverlap(); return; }
       }
     }
 
