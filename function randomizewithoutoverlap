@@ -1,0 +1,21 @@
+function randomizewithoutoverlap () {
+for (var i=1; i<n; i++) {
+  // Random initialization of the disks
+  x[i]  = xmin+0.5*diameter[i] + (xmax-xmin-diameter[i] )*Math.random();
+  vx[i] = vmax*(Math.random()-0.5);
+  y[i]  = ymin+0.5*diameter[i]  + (ymax-ymin-diameter[i] )*Math.random();
+  vy[i] = vmax*(Math.random()-0.5);
+}
+// solid code by wolfgang
+//https://www.compadre.org/osp/items/detail.cfm?ID=8307
+// Check for illegal states
+    for (var i=0; i<n; i++) {
+      for (var j=i+1; j<n; j++) {
+        var d1 = x[j]-x[i];
+        var d2 = y[j]-y[i];
+        var result = d1*d1+d2*d2-(diameter[i]+diameter[j])*(diameter[i]+diameter[j])/4;
+        if (result<0) { randomize(); return; }
+      }
+    }
+
+}
