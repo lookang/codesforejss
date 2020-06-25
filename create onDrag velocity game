@@ -1,0 +1,28 @@
+//variable defined
+t0		double	
+t1		double	
+vecx0	0	double	
+vecy0	0	double	
+vecx1	0	double	
+vecx2	0	double	
+
+//onPress button code
+//calculate release velocity
+ vecx0 = x[elementinteracted];
+ vecy0 = y[elementinteracted];
+ t0=t; //t0 is time of onpress
+
+//onRelease button code
+vecx1 = x[elementinteracted]; // store temp x and y values
+ vecy1 = y[elementinteracted];
+t1=t; // set t1 as current OnRelease t
+
+var dt=t1-t0; // calculate change in time
+if(dt==0){
+  vx[elementinteracted]=0; // set to zero velocity
+  vy[elementinteracted]=0;
+  }
+ else{
+vx[elementinteracted]=(vecx1-vecx0)/dt; 
+vy[elementinteracted]=(vecy1-vecy0)/dt;
+}
