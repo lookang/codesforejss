@@ -35,7 +35,7 @@ function showRewardVideo() {
   Text = "⏮👍Support Ads"
   // any of the 3 ads methods
   OnClick = 
-showInterstitialAds(); // to activate this typoe of ads
+showInterstitialAds(); // to activate this type of ads
 showRewardVideo(); // etc
 showBannerAd(); //etc
   
