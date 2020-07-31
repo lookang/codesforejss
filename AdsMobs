@@ -1,0 +1,41 @@
+// copy this to a custom
+//https://weelookang.blogspot.com/2020/05/how-to-add-adsmob-into-ionic-4-ejss.html
+
+
+function showRewardVideo() {
+		const e = new Event("click");
+		try { // allow code to run in normal browser
+		const element = parent.document.getElementById("banner");
+		element.dispatchEvent(e);
+		} catch(e) {
+		 const element = false; 
+		  }
+	}
+	function showBannerAd() {
+		const e = new Event("click");
+		try { // allow code to run in Snormal browser 
+		const element = parent.document.getElementById("reward");
+		element.dispatchEvent(e);
+		} catch(e) {
+		 const element = false; 
+		  }
+	}
+	function showInterstitialAds() {
+		const e = new Event("click");
+		try { // allow code to run in normal browser
+		const element = parent.document.getElementById("interstitial");
+		element.dispatchEvent(e);
+		} catch(e) {
+		 const element = false; 
+		  }
+	}
+  
+  
+  // copy this into a button to activate the ads
+  Text = "⏮👍Support Ads"
+  // any of the 3 ads methods
+  OnClick = 
+showInterstitialAds(); // to activate this typoe of ads
+showRewardVideo(); // etc
+showBannerAd(); //etc
+  
