@@ -32,7 +32,7 @@ function showRewardVideo() {
   
   
   // copy this into a button to activate the ads
-  Text = "⏮👍Support Ads"
+  Text = "🎥⏮👍Support Ads"
   // any of the 3 ads methods
   OnClick = 
 showInterstitialAds(); // to activate this type of ads
