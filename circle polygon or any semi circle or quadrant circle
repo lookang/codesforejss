@@ -1,0 +1,39 @@
+//define angle as what you need for example Math.PI for half a circle
+
+// copy this into PointX
+[0,1, Math.cos(angle/16),Math.cos(angle/8), Math.cos(angle*3/16),Math.cos(angle/4), Math.cos(angle*5/16),Math.cos(angle*3/8), Math.cos(angle*7/16),Math.cos(angle/2), Math.cos(angle*9/16),Math.cos(angle*5/8), Math.cos(angle*11/16),Math.cos(angle*3/4), Math.cos(angle*13/16),Math.cos(angle*7/8), Math.cos(angle*15/16),Math.cos(angle),0] 
+// copy into PointY
+[0,0, Math.sin(angle/16),Math.sin(angle/8), Math.sin(angle*3/16),Math.sin(angle/4), Math.sin(angle*5/16),Math.sin(angle*3/8), Math.sin(angle*7/16),Math.sin(angle/2), Math.sin(angle*9/16),Math.sin(angle*5/8), Math.sin(angle*11/16),Math.sin(angle*3/4), Math.sin(angle*13/16),Math.sin(angle*7/8), Math.sin(angle*15/16),Math.sin(angle),0]
+
+
+// function type
+function quadCircle (a,b,R,thetastart,angle) { // x,y,R,thetastart,angle
+ // angle = pi; //angle to draw
+    angle = pi/2; //angle to draw
+  dangle = angle/n; //spacing of angle
+//  a[0]=0;// no need start polygon at (R,0)
+ // b[0]=0;
+  
+  //text[0]=0
+  //x[1]=0
+  //y[1]=4
+  //text[1]=1
+
+ // for (var i=16; i<=n  ; i++) { 
+  for (var i=0; i<=n  ; i++) { // use n=0 to 32 change angle instead
+    a[i] = R*Math.cos(i*dangle+thetastart); // first point is on the right corner say x of(1,0)
+    b[i] = R*Math.sin(i*dangle+thetastart); // first point is on the right corner say y of (1,0)
+    //text[i]= i; // label
+    // when i ==0
+    //x[0]=1;
+    //y[0] = 0;
+  }
+
+  //x[0] = 0;
+  //y[0]=0;
+//  a[n+1] = a[0]; // join back to start
+//  b[n+1]= b[0];// join back to start
+  a[n+1] = 0; // join abck to origin
+  b[n+1]= 0;
+  
+}

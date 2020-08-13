@@ -1,6 +1,0 @@
-//define angle as what you need for example Math.PI for half a circle
-
-// copy this into PointX
-[0,1, Math.cos(angle/16),Math.cos(angle/8), Math.cos(angle*3/16),Math.cos(angle/4), Math.cos(angle*5/16),Math.cos(angle*3/8), Math.cos(angle*7/16),Math.cos(angle/2), Math.cos(angle*9/16),Math.cos(angle*5/8), Math.cos(angle*11/16),Math.cos(angle*3/4), Math.cos(angle*13/16),Math.cos(angle*7/8), Math.cos(angle*15/16),Math.cos(angle),0] 
-// copy into PointY
-[0,0, Math.sin(angle/16),Math.sin(angle/8), Math.sin(angle*3/16),Math.sin(angle/4), Math.sin(angle*5/16),Math.sin(angle*3/8), Math.sin(angle*7/16),Math.sin(angle/2), Math.sin(angle*9/16),Math.sin(angle*5/8), Math.sin(angle*11/16),Math.sin(angle*3/4), Math.sin(angle*13/16),Math.sin(angle*7/8), Math.sin(angle*15/16),Math.sin(angle),0]
