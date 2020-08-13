@@ -6,6 +6,10 @@
 [0,0, Math.sin(angle/16),Math.sin(angle/8), Math.sin(angle*3/16),Math.sin(angle/4), Math.sin(angle*5/16),Math.sin(angle*3/8), Math.sin(angle*7/16),Math.sin(angle/2), Math.sin(angle*9/16),Math.sin(angle*5/8), Math.sin(angle*11/16),Math.sin(angle*3/4), Math.sin(angle*13/16),Math.sin(angle*7/8), Math.sin(angle*15/16),Math.sin(angle),0]
 
 
+// function variable declare
+//x [n+2]
+//y [n+2]
+
 // function type
 function quadCircle (a,b,R,thetastart,angle) { // x,y,R,thetastart,angle
  // angle = pi; //angle to draw
@@ -20,7 +24,7 @@ function quadCircle (a,b,R,thetastart,angle) { // x,y,R,thetastart,angle
   //text[1]=1
 
  // for (var i=16; i<=n  ; i++) { 
-  for (var i=0; i<=n  ; i++) { // use n=0 to 32 change angle instead
+  for (var i=0; i<=n  ; i++) { // use n=0 to 32 change angle instead only the points od the circumference
     a[i] = R*Math.cos(i*dangle+thetastart); // first point is on the right corner say x of(1,0)
     b[i] = R*Math.sin(i*dangle+thetastart); // first point is on the right corner say y of (1,0)
     //text[i]= i; // label
@@ -35,5 +39,7 @@ function quadCircle (a,b,R,thetastart,angle) { // x,y,R,thetastart,angle
 //  b[n+1]= b[0];// join back to start
   a[n+1] = 0; // join abck to origin
   b[n+1]= 0;
+   a[n+2] = a[0]; // join back to a[0],b[0] to form a closed polygon
+  b[n+2]= b[0];
   
 }
