@@ -1,6 +1,6 @@
 // since EJSS added ability to zoom and pan
 // x = Math.round(x) // does not work well
-// the coordinates of the mouse is capyured in EJSS as (xmouse,ymouse) = (_info.point[0] , _info.point[0] )
+// the coordinates of the mouse is capyured in EJSS as (xmouse,ymouse) = (_info.point[0] , _info.point[1] )
 
 var x;
 x = Math.round(_info.point[0]/5)*5; // round to nearest 5
