@@ -1,6 +1,6 @@
 // since EJSS added ability to zoom and pan
 // x = Math.round(x) // does not work well
-// the coordinates of the mouse is capyured in EJSS as (xmouse,ymouse) = (_info.point[0] , _info.point[1] )
+// the coordinates of the mouse is captured in EJSS as (xmouse,ymouse) = (_info.point[0] , _info.point[1] )
 
 var x;
 x = Math.round(_info.point[0]/5)*5; // round to nearest 5
@@ -8,6 +8,13 @@ x = Math.round(_info.point[0]/10)*10; // round to nearest 10
 var y;
 y = Math.round(_info.point[1]/10)*10; // round to nearest 10
 
+another method is mouse is captured in EJSS as (xmouse,ymouse) 
+//define position in variable page
+//copy this into the any of the OnPress or OnDrag depending on what you need
+// make sure the name of the plottingPanel is reference correctly, if you change the name, please edit accordingly
+position = _view.plottingPanel.getInteraction().getInteractionPoint();
+// position[0] = x coordinate of mouse clicked
+//position[1] = y  coordinate of mouse clicked
 
 // for limiting rage of zoom
 //_view.plottingPanel.setProperty("MinimumY",-0.35);
