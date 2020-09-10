@@ -2,6 +2,10 @@
 // paste "url(#mygrandient1)" into the HtmlView Graphical Aspect as any of the replacement for colors
 // may need to change name <radialGradient id="mygrandientgolden"
 // and corresponding change the paste "url(#mygrandientgolden)" into the HtmlView Graphical Aspect as any of the replacement for color
+// below code is added to make EJSS not go below 100% height
+//container.style.width = 0;
+//container.style.height = 0;
+//container.style.display = 'flex';
 
 //golden color
 var container = document.createElement('div');
@@ -12,6 +16,9 @@ var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'
   '  </radialGradient>'+
   '</defs></svg>';
 container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
 document.body.appendChild(container);
 //"url(#mygrandientgolden)"
 
@@ -24,6 +31,9 @@ var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'
   '  </radialGradient>'+
   '</defs></svg>';
 container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
 document.body.appendChild(container);
 //"url(#mygrandientgray)"
 
@@ -36,6 +46,9 @@ var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'
   '  </radialGradient>'+
   '</defs></svg>';
 container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
 document.body.appendChild(container);
 //"url(#mygrandientlightgrey)"
 
@@ -49,6 +62,9 @@ var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'
   '  </radialGradient>'+
   '</defs></svg>';
 container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
 document.body.appendChild(container);
 //"url(#mygrandient1)"
 
@@ -61,6 +77,9 @@ var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'
   '  </radialGradient>'+
   '</defs></svg>';
 container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
 document.body.appendChild(container);
 //"url(#mygrandient1)"
 
@@ -74,5 +93,49 @@ var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'
   '  </radialGradient>'+
   '</defs></svg>';
 container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
+document.body.appendChild(container);
+//"url(#mygrandient2)"
+
+var container = document.createElement('div');
+var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'+
+  '  <radialGradient id="mygrandient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">'+
+  '    <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:1" />'+
+  '    <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.5" />'+
+  '  </radialGradient>'+
+  '</defs></svg>';
+container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
+document.body.appendChild(container);
+
+var container = document.createElement('div');
+var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'+
+  '  <radialGradient id="mygrandient1" cx="50%" cy="50%" r="80%" fx="30%" fy="30%">'+
+  '    <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:1" />'+
+  '    <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:1" />'+
+  '  </radialGradient>'+
+  '</defs></svg>';
+container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
+document.body.appendChild(container);
+//"url(#mygrandient1)"
+
+var container = document.createElement('div');
+var svggradient = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs>'+
+  '  <radialGradient id="mygrandient2" cx="50%" cy="50%" r="70%" fx="90%" fy="50%">'+
+  '    <stop offset="0%" style="stop-color:rgb(0,255,0); stop-opacity:0.5" />'+
+  '    <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.5" />'+
+  '  </radialGradient>'+
+  '</defs></svg>';
+container.innerHTML = svggradient;
+container.style.width = 0;
+container.style.height = 0;
+container.style.display = 'flex';
 document.body.appendChild(container);
 //"url(#mygrandient2)"
