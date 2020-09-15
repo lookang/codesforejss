@@ -1,0 +1,104 @@
+//duplicate code to increase stable behavoir
+//https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+//var circle1 = {radius: 20, x: 5, y: 5};
+//var circle2 = {radius: 12, x: 10, y: 5};
+
+//1 electrons on 1st rowelectrons
+for (var i=0; i<objectinteracted ; i++) {
+
+var dx = xanimals[objectinteracted] - xanimals[i];
+var dy = yanimals[objectinteracted] - yanimals[i];
+var distance = Math.sqrt(dx * dx + dy * dy);
+
+if ((distance < diameter[objectinteracted]/2 + diameter[i]/2)&&nanimalsshow==true) {
+ angleRadians = Math.atan2(yanimals[objectinteracted] - yanimals[i], xanimals[objectinteracted] - xanimals[i]);
+var spacing=0.1;
+xanimals[objectinteracted]= xanimals[objectinteracted]+Math.cos(angleRadians)*spacing;
+yanimals[objectinteracted]= yanimals[objectinteracted]+Math.sin(angleRadians)*spacing;
+   // collision detected!
+}
+}
+// cannot self check ==objectinteracted
+for (var i=objectinteracted+1; i<=nanimals ; i++) {
+
+var dx = xanimals[objectinteracted] - xanimals[i];
+var dy = yanimals[objectinteracted] - yanimals[i];
+var distance = Math.sqrt(dx * dx + dy * dy);
+
+if ((distance < diameter[objectinteracted]/2 + diameter[i]/2)&&nanimalsshow==true) {
+angleRadians = Math.atan2(yanimals[objectinteracted] - yanimals[i], xanimals[objectinteracted] - xanimals[i]);
+var spacing=0.1;
+xanimals[objectinteracted]= xanimals[objectinteracted]+Math.cos(angleRadians)*spacing;
+yanimals[objectinteracted]= yanimals[objectinteracted]+Math.sin(angleRadians)*spacing;
+
+    // collision detected!
+}
+}
+
+//1row electrons on 2nd rowelectrons
+for (var i=0; i<=nanimals2 ; i++) {
+
+var dx = xanimals[objectinteracted] - xanimals2[i];
+var dy = yanimals[objectinteracted] - yanimals2[i];
+var distance = Math.sqrt(dx * dx + dy * dy);
+
+if ((distance < diameter[objectinteracted]/2 + diameter2[i]/2)&&nanimalsshow2==true) {
+  angleRadians = Math.atan2(yanimals[objectinteracted] - yanimals2[i], xanimals[objectinteracted] - xanimals2[i]);
+var spacing=0.1;
+xanimals[objectinteracted]= xanimals[objectinteracted]+Math.cos(angleRadians)*spacing;
+yanimals[objectinteracted]= yanimals[objectinteracted]+Math.sin(angleRadians)*spacing;
+
+    // collision detected!
+}
+}
+
+//1row electrons on 3nd rowelectrons
+for (var i=0; i<=nanimals3 ; i++) {
+
+var dx = xanimals[objectinteracted] - xanimals3[i];
+var dy = yanimals[objectinteracted] - yanimals3[i];
+var distance = Math.sqrt(dx * dx + dy * dy);
+
+if ((distance < diameter[objectinteracted]/2 + diameter3[i]/2)&&nanimalsshow3==true) {
+   angleRadians = Math.atan2(yanimals[objectinteracted] - yanimals3[i], xanimals[objectinteracted] - xanimals3[i]);
+var spacing=0.1;
+xanimals[objectinteracted]= xanimals[objectinteracted]+Math.cos(angleRadians)*spacing;
+yanimals[objectinteracted]= yanimals[objectinteracted]+Math.sin(angleRadians)*spacing;
+
+}
+
+}
+
+//1row electrons on 4 rowelectrons
+for (var i=0; i<=nanimals4 ; i++) {
+
+var dx = xanimals[objectinteracted] - xanimals4[i];
+var dy = yanimals[objectinteracted] - yanimals4[i];
+var distance = Math.sqrt(dx * dx + dy * dy);
+
+if ((distance < diameter[objectinteracted]/2 + diameter4[i]/2)&&nanimalsshow4==true) {
+   angleRadians = Math.atan2(yanimals[objectinteracted] - yanimals4[i], xanimals[objectinteracted] - xanimals4[i]);
+var spacing=0.1;
+xanimals[objectinteracted]= xanimals[objectinteracted]+Math.cos(angleRadians)*spacing;
+yanimals[objectinteracted]= yanimals[objectinteracted]+Math.sin(angleRadians)*spacing;
+
+    // collision detected!
+}
+}
+//1row electrons on 5th rowelectrons
+for (var i=0; i<=nanimals5 ; i++) {
+
+var dx = xanimals[objectinteracted] - xanimals5[i];
+var dy = yanimals[objectinteracted] - yanimals5[i];
+var distance = Math.sqrt(dx * dx + dy * dy);
+
+if ((distance < diameter[objectinteracted]/2 + diameter5[i]/2)&&nanimalsshow5==true) {
+   angleRadians = Math.atan2(yanimals[objectinteracted] - yanimals5[i], xanimals[objectinteracted] - xanimals5[i]);
+var spacing=0.1;
+xanimals[objectinteracted]= xanimals[objectinteracted]+Math.cos(angleRadians)*spacing;
+yanimals[objectinteracted]= yanimals[objectinteracted]+Math.sin(angleRadians)*spacing;
+
+    // collision detected!
+}
+}
+
