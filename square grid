@@ -1,0 +1,11 @@
+var length = 10;
+var startx = 0.5;
+var lengthy = 10;
+var starty = 0.5;
+var numberofdotsperline = 10;
+var numberofrows = 10;
+for (var i=0; i<=ncell  ; i++) { // line y=3.5
+    xcell[i] = startx+ i%(numberofdotsperline);
+   ycell[i] = starty+parseInt(i/(numberofrows)); // divide by 5 to get 4 rows
+  text[i]= i+1;
+}
