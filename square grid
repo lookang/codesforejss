@@ -1,3 +1,11 @@
+//variable page
+//declare
+ncell = 100;
+xcell dimension [n]
+ycell dimension [n]
+
+
+//copy and paste in initialization page
 var length = 10;
 var startx = 0.5;
 var lengthy = 10;
