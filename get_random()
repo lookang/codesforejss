@@ -1,0 +1,8 @@
+//https://stackoverflow.com/questions/5915096/get-a-random-item-from-a-javascript-array
+
+//copy to custom function
+get_random = function (list) {
+  return list[Math.floor((Math.random()*list.length))];
+} 
+
+get_random([2,3,5,7]) //usage
