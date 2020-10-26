@@ -15,6 +15,11 @@ document.getElementById(".myBoxPanelOk").style.top = "0px";
 firsttime2=false; // turn off and remembers due to undefined
 }
 
+// simple line <b> bold, <br/> next line
+_tools.showOkDialog("<b>Choose the Metal and Non-metal for the ionic compound. <br/><br/> Then refer the Periodic Table below to determine the number of electrons in the atoms⚛.</b>");
+
+
+
 // show something
 EJSS_INTERFACE.BoxPanel.showOkDialog("Info message", 
     function(){ 
