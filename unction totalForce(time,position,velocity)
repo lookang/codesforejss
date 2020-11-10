@@ -1,0 +1,83 @@
+function totalForce(time,position,velocity) {
+// var time;
+ //var position;
+ //var velocity;
+ // Ft is force tangential
+ if (velocity!==0) return Ft+directionOfMotion*dynamicFriction;
+   else if (staticFriction>0) return (Math.abs(staticFriction)+Ft);
+else if (staticFriction<0) return (-Math.abs(staticFriction)+Ft);
+//return 0;
+return 0+Ft; // fix bug of stationary but cannot move
+
+//return Math.sign(Ft)*Math.max(0,staticFriction+Ft);
+//return (Math.abs(staticFriction)+Ft);
+ //return Math.max(0,Math.abs(staticFriction+Ft));
+}
+
+
+// in fixed relationship
+// current direction of motion
+if (v===0){
+  directionOfMotion=0;
+  }
+  else if (v<0){
+    directionOfMotion=-1;
+    }
+    else if (v>0){
+    directionOfMotion=+1;
+    }
+    
+// fixed relationship
+// Forces
+weight = blockMass*gravity;
+//Ft = weight*Math.sin(angle);
+Ft = weight*Math.sin(angle)+Pusht; // add Pusht by lookang
+//normalForce = weight*Math.cos(angle);
+normalForce = weight*Math.cos(angle)+Pushn;
+maxStaticFriction = normalForce*staticCoefficient;
+//staticFriction = -Math.min(Ft,maxStaticFriction);
+if (Ft>0){
+staticFriction = -Math.min(Ft,maxStaticFriction);
+}
+if (Ft<0){
+staticFriction = Math.min(-Ft,maxStaticFriction);
+}
+
+
+//staticFriction = -Math.min(Math.abs(Ft),maxStaticFriction);
+dynamicFriction = -normalForce*dynamicCoefficient;
+if (v===0&&totalForce(t,x,v)===0){
+  Friction = staticFriction;
+  Fdftext = "f_s = "+_view._format(Math.abs(staticFriction),"0.000")+ " N ";
+  statetext= " in equilibrium, F_net = " + _view._format(totalForce(t,x,v),"0.000") + " N "+" ,t = "+_view._format(t,"0.00")+ " s "; 
+  colorF="rgba(0,0,255,255)";
+  }
+//  else if (v===0&&totalForce(t,x,v)!==0){
+//  Friction = staticFriction;
+//  Fdftext = "f_s = "+_view._format(-staticFriction,"0.000")+ " N ";
+//  statetext= " NOT in equilibrium, F_net = " + _view._format(totalForce(t,x,v),"0.000") + " N "; 
+//  colorF="rgba(0,0,255,255)";
+ // }
+  else if (v===0&&totalForce(t,x,v)>0){
+  Friction = staticFriction;
+  Fdftext = "f_s = "+_view._format(Math.abs(staticFriction),"0.000")+ " N ";
+  statetext= " NOT in equilibrium, F_net = " + _view._format(totalForce(t,x,v),"0.000") + " N "+" ,\nt = "+_view._format(t,"0.00")+ " s "; 
+  colorF="rgba(0,0,255,255)";
+  }
+  else if (v===0&&totalForce(t,x,v)<0){
+  Friction = staticFriction;
+  Fdftext = "f_s = "+_view._format(Math.abs(staticFriction),"0.000")+ " N ";
+  statetext= " NOT in equilibrium, F_net = " + _view._format(totalForce(t,x,v),"0.000") + " N "+" ,\nt = "+_view._format(t,"0.00")+ " s "; 
+  colorF="rgba(0,0,255,255)";
+  }
+  else if (v!==0){
+    Friction =dynamicFriction*directionOfMotion;
+   Fdftext = "f_k = "+_view._format(-dynamicFriction,"0.000")+ " N ";
+   statetext= " NOT in equilibrium and in motion, \n F_net = " + _view._format(totalForce(t,x,v),"0.000") + " N +direction along the slope to the right"+" ,\nt = "+_view._format(t,"0.00")+ " s "; 
+   colorF="rgba(255,0,255,255)";
+   }
+   
+   
+   //ODE
+   dx/dt = v
+   dv/dt = totalForce(t,x,v)/blockMass
