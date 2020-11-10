@@ -1,0 +1,27 @@
+//template code
+//edit to suit your use
+// from friction
+
+function dragaroundacircle () {
+h = L *(ydrag/(L-xdrag)) ; // sync drag position to h
+angle=Math.atan2(h,L); // sync angle
+  angles=angle; // store angle
+//  h = L * Math.tan(angleDegrees*Math.PI/180); //sync slider value
+ angleDegrees = Math.round(angle*180/Math.PI);
+ //angle = angleDegrees/180*pi; // assign 10,20, angle back
+xdrag= L*(1-Math.cos(angle)); //constraint to move in circle
+ydrag = L*Math.sin(angle);
+//if (xdrag>19.99) xdrag=19.99; //  
+//if (ydrag<-4) ydrag=-4;
+ //xdrag= L*(1-Math.cos(angleDegrees/180*pi)); //constraint to move in circle
+//ydrag = L*Math.sin(angleDegrees/180*pi);
+//  x1=x;
+ // omega=0.0;
+  v=0.0;
+  vy=0.0;
+  t=0.0;
+
+
+ // scale=g*(y+L)/2+2;
+  //_view.resetTraces();
+}
