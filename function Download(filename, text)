@@ -1,0 +1,33 @@
+// code from ntscience intern
+
+function Download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+// text is define as something like a output
+*/
+2
+nil
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+*/
+
+function Write() {
+  text = numSliders + "\n"
+        + st1 + "\n"
+        +min1 + " " + max1 + " " + inc1 + " " + mark1 + "\n"
+        +min2 + " " + max2 + " " + inc2 + " " + mark2 + "\n"
+        +min3 + " " + max3 + " " + inc3 + " " + mark3 + "\n"
+        +min4 + " " + max4 + " " + inc4 + " " + mark4 + "\n";
+}
