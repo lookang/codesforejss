@@ -1,0 +1,111 @@
+//update user selection
+//TT: 3 mar 2016
+function computeDisplacement() {
+  //Set default value for displacement model selection
+  //Cannot set in variable because it will reset the user selected value to default 
+  if (selectedmodel[0].length === 0) {
+    selectedmodel[0] = "0.5*1*v^2";
+  }
+    
+  //possible selection from model drop-down: 
+  //["2*sin(t)","2*cos(t)","0.5*1*v^2","m*g*(L+y)","m*g*y","0","show me KE","show me PE","show me TE","show me KE vs x","show me PE vs x","show me TE vs x", "user input"]
+  switch(selectedmodel[0])
+  {
+    case "0.5*m*v^2":
+      functionY= "0.5*"+_view._format(m,"0.0000")+"*"+_view._format(v,"0.0000")+"^2";
+      selectedmodelDisplay = selectedmodel[0];
+      showTrail = true;
+    //  isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "m*g*(L+y)":
+      functionY = _view._format(m,"0.0000") + "*" + _view._format(g,"0.0000") + "*(" + _view._format(L,"0.0000") + "+" + _view._format(y,"0.0000") + ")";
+      selectedmodelDisplay = selectedmodel[0];
+      showTrail = true;
+     // isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "m*g*h": // "m*g*y":
+      functionY = _view._format(m,"0.0000") + "*" + _view._format(g,"0.0000") + "*" + _view._format(L+y,"0.0000");
+      selectedmodelDisplay = selectedmodel[0];
+      showTrail = true;
+     // isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "show me KE":
+      functionY = "0.5*"+_view._format(m,"0.0000")+"*"+_view._format(Math.abs(thetas),"0.0000")+"^2*"+_view._format(modelomega,"0.0000")+"^2*sin("+_view._format(modelomega,"0.0000")+"*t)*sin("+_view._format(modelomega,"0.0000")+"*t)";  
+   //   selectedmodelDisplay = "0.5 * m * thetas^2 * modelomega^2 * sin(modelomega * t) * sin(modelomega * t)";
+       selectedmodelDisplay = ""+functionY;
+      showTrail = false;
+    //  isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "show me PE":
+      functionY = "0.5*"+_view._format(m,"0.0000")+"*"+_view._format(Math.abs(thetas),"0.0000")+"^2*"+_view._format(modelomega,"0.0000")+"^2*cos("+_view._format(modelomega,"0.0000")+"*t)*cos("+_view._format(modelomega,"0.0000")+"*t)";  
+     // selectedmodelDisplay = "0.5 * thetas^2 * modelomega^2 * cos(modelomega * t) * cos(modelomega * t)";
+         selectedmodelDisplay = ""+functionY;
+      showTrail = false;
+    //  isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "show me TE":
+      functionY = "0.5*"+_view._format(m,"0.0000")+"*"+_view._format(Math.abs(thetas),"0.0000")+"^2*"+_view._format(modelomega,"0.0000")+"^2*1";
+   //   selectedmodelDisplay = "0.5 * m * thetas^2 * modelomega^2 * 1";
+         selectedmodelDisplay = ""+functionY;
+      showTrail = false;
+     // isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "show me KE vs x":  
+      functionY = "0.5*"+_view._format(m,"0.0000")+"*"+_view._format(modelomega,"0.0000")+"^2*("+_view._format(Math.abs(thetas),"0.0000")+"^2-x^2)";
+     // selectedmodelDisplay = "0.5 * m * thetas^2 * modelomega^2 - x^2";
+         selectedmodelDisplay = ""+functionY;
+      showTrail = false;
+     // isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "show me PE vs x":
+      functionY = "0.5*"+_view._format(m,"0.0000")+"*"+_view._format(modelomega,"0.000")+"^2*(x^2)";
+   //   selectedmodelDisplay = "0.5 * m * modelomega^2 * (x^2)";
+         selectedmodelDisplay = ""+functionY;
+      showTrail = false;
+   //   isUserInput = false;
+       isUserInput = true;
+      break;
+      
+    case "show me TE vs x":  
+      functionY = "0.5*"+_view._format(m,"0.0000")+"*"+_view._format(modelomega,"0.0000")+"^2*("+_view._format(Math.abs(thetas),"0.0000")+"^2)";
+         selectedmodelDisplay = ""+functionY;
+      showTrail = false;
+     // isUserInput = false;
+      isUserInput = true;
+      break;
+      
+    case "user input":
+      functionY = verifyUserInputFormula(selectedmodelDisplay);
+      showTrail = true;
+      isUserInput = true;
+      break;
+      
+    default:   
+      functionY=selectedmodel[0];
+      showTrail = false;
+  }
+   
+  //a temporary function Y is created to replace t in functionY 
+  var tempfunctionY = functionY.replace(/t/g, t);
+    
+  //note: this math.eval() function is from the math.min.js library "included" in the HTMLview. It is able to evaluate a string into Javascript Math library functions.
+  //e.g. sin() in the formula is supposed to be Math.sin() in javascript. This add-on library help to convert it automatically. 
+  //modelvalueY is used in the trail curve - UserModelTrail
+  modelvalueY = math.eval(tempfunctionY);
+  
+  //debugstring = "tempfunctionY = " + tempfunctionY + ", functionY = " + functionY + "modelvalueY = " + _view._format(modelvalueY,"0.000");
+}
