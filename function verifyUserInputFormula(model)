@@ -1,0 +1,25 @@
+//TT: 3 mar 2016
+function verifyUserInputFormula(model) 
+{
+  //valid variable names that user can input to their formula
+  var validVariablesName = ["t","L","h","g","m","x","v"];
+  
+  //variable names to actual variable map
+  var validVariables = {"t": t,
+                        "L": L,
+                     //   "y": y,
+                     "h": L+y,
+                        "g": g, 
+                        "m": m, 
+                        "x": x,
+                        "v": v};
+  
+  //replace all the valid variable name in the model to the value of the corresponding variable.
+  for (var i = 0; i < validVariablesName.length; i++)
+  {
+    //model = model.replace(validVariablesName[i], validVariables[validVariablesName[i]]);
+     model = replaceAll( model, validVariablesName[i], validVariables[validVariablesName[i]]);
+  }
+  
+  return model;
+}
