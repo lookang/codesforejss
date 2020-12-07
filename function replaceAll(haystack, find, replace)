@@ -1,0 +1,14 @@
+/**
+ * Reference: thusharaK & Nivesh Saharan @ http://stackoverflow.com/questions/1144783/replacing-all-occurrences-of-a-string-in-javascript
+ * Replace all the occerencess of $find by $replace in $originalString
+ * @param  {originalString} input - Raw string.
+ * @param  {find} input - Target key word or regex that need to be replaced.
+ * @param  {replace} input - Replacement key word
+ * @return {String}       Output string
+ */
+function replaceAll(haystack, find, replace) 
+{
+  //TT: Handle the RegEx special characters in find. Use this if find contains RegEx special characters.
+  //return haystack.replace(new RegExp(find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1"), 'g'), replace);
+  return haystack.replace(new RegExp(find, 'g'), replace);
+};
