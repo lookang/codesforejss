@@ -10,4 +10,6 @@ _view.plottingPanel.getMessageDecoration("TL").getFont().setFontSize("1vw");
 _view.plottingPanel.getMessageDecoration("TR").getFont().setFontSize("1vw");
 _view.plottingPanel.getMessageDecoration("BL").getFont().setFontSize("1vw");
 _view.plottingPanel.getMessageDecoration("BR").getFont().setFontSize("1vw");
+
+_view.plottingPanel.getMessageDecoration("TL").getStyle().setFillColor("red");
     }
