@@ -1,0 +1,6 @@
+var sx = _view.shape.getSizeX()
+
+_view.shape.getSizeX() // get sizeX
+if(sx < 0.5) _view.fill.setSizeX(sx+0.1); // clever way to do anaimation in Evolution
+
+console.log(arguments[0]); // allows the positions to be display in console.log
