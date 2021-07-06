@@ -4,3 +4,9 @@ _view.shape.getSizeX() // get sizeX
 if(sx < 0.5) _view.fill.setSizeX(sx+0.1); // clever way to do anaimation in Evolution
 
 console.log(arguments[0]); // allows the positions to be display in console.log
+
+var pos = arguments[0];
+_view.trail.addPoint(pos);
+
+_info.point[0] // x postion of cursor after dragging useful of Math.round(_info.point[0])
+_info.point[1] // y postion of cursor after dragging
