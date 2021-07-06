@@ -1,0 +1,75 @@
+//initialization
+counter = 0;
+keyframes = [ 
+  { pos: 0, 
+    values: { p0: [-2,0], p1: [-1,1], p2: [1,1], p3: [2,0], p4: [1,-1], p5: [-1,-1] }
+  },
+  { pos: 50, 
+    values: { p0: [-1,0], p1: [-1,1], p2: [1,1], p3: [1,0], p4: [1,-1], p5: [-1,-1] }
+  },  
+  { pos: 100, 
+    values: { p0: [-1,0], p1: [-2,1], p2: [2,1], p3: [1,0], p4: [2,-1], p5: [-2,-1] }
+  },  
+  { pos: 150, 
+    values: { p0: [-1,0], p1: [-2,2], p2: [2,2], p3: [1,0], p4: [2,-2], p5: [-2,-2] }
+  }
+];
+initialization(keyframes);
+
+
+//Evolution
+counter += 1;
+interpolate(keyframes, counter);
+console.log("frame " + counter);
+
+//Custom
+function initialization (keyframes) {
+  for (var prop in keyframes[0].values) {
+    var v0 = keyframes[0].values[prop];
+    if(Array.isArray(v0)) 
+      eval(prop + "=" + "[" + v0 + "]");
+    else
+      eval(prop + "=" + v0);
+  }
+}
+
+function interpolate (keyframes, pos) {
+  // select current keyframes (could be optimized)
+  var k0, k1;
+  for (var i = 0; i < keyframes.length; i++) {   
+    var kf = keyframes[i];
+    if(kf.pos >= pos) {
+      k1 = kf;
+      break;
+    }
+    k0 = kf;
+  }
+  // frame > maximum keyframe
+  if(typeof k1 == 'undefined') return;
+
+  // interpolation
+  var times = (pos - k0.pos)/(k1.pos - k0.pos);
+  for (var prop in k0.values) {
+    var v0 = k0.values[prop];
+    var command = "";
+    if (k1.values.hasOwnProperty(prop)) { // variable to interpolate
+        var v1 = k1.values[prop];
+        if(Array.isArray(v0)) { // array
+          var dv = [];
+          for(var j = 0; j < v0.length; j++) {
+            dv[j] = v0[j] + (v1[j] - v0[j]) * times;
+          }
+          command = prop + "=" + "[" + dv + "]";
+        } else { // number
+          var dv = v0 + (v1 - v0) * times;
+          command = prop + "=" + dv;
+        }
+    } else { // variable not defined in the following keyframe
+        if(Array.isArray(v0)) 
+          command = prop + "=" + "[" + v0 + "]";
+        else
+          command = prop + "=" + v0;
+    }
+    eval(command);
+  }
+}
