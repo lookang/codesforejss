@@ -1,5 +1,9 @@
 // goto Initialization and paste this if the MathJax is required at first
-MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+try { // allow code to run in Student Learning Space 
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+} catch(e) {
+  MathJax = false
+}
 
 //goto Fixed relations and paste this if the MathJax is required all the time
 MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
