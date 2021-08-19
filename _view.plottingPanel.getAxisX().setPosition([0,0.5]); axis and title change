@@ -21,3 +21,5 @@ _view.plottingPanel.getTitleX().setAbsoluteY(_view.plottingPanel.getGrid().getFi
 _view.plottingPanel.getTitleY().setAbsoluteX(_view.plottingPanel.getGrid().getFixedTickX());
 }
 
+//var getRealWorldYMin = _view.plottingPanel.getRealWorldYMin();
+//var getRealWorldYMax = _view.plottingPanel.getRealWorldYMax();
