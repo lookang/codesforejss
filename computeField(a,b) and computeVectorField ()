@@ -1,0 +1,52 @@
+//variables declared
+//Ex =0
+//Ey =0
+//maxParticles =100 // some large number
+//howMany = 2
+//numParticles = howMany
+//K = 10. //some physics constant
+//charge = 1 [maxParticles]
+//x =0 [maxParticles] // position x of charges
+//y =0 [maxParticles] // position y of charges
+
+// a,b are coordinates like x,y
+function computeField (a,b) {
+var force = 0.0 //reset force to zero before being used 
+var r2; // distance squared
+  Ex=0.0; // electric field strength in x set to zero
+  Ey=0.0; // electric field strength in y set to zero
+  for (var i=0; i<numParticles; i++) {
+    r2 = (x[i]-a)*(x[i]-a) + (y[i]-b)*(y[i]-b);
+    if (r2<threshold) continue; // threshold is the smallest radius square to compute Ex and Ey
+    Ex += K*charge[i]*(a-x[i])/r2;
+    Ey += K*charge[i]*(b-y[i])/r2;
+  }
+  }
+  
+  
+//showVectorField = true //boolean
+//resolution = 11 // to place how far fieldposx and fieldposy
+//vectorIndex =   resolution*resolution // fieldIndex
+//fieldsizex = 0 [vectorIndex]
+//fieldsizey = 0 [vectorIndex]
+//field = 0 [resolution][resolution][5] // depreciated old way of ejs vectorField
+
+function computeVectorField () {
+if (showVectorField)
+  for (var i=0; i<resolution; i++) {
+    for (var j=0; j<resolution; j++) {
+      vectorIndex = i+resolution*j;
+      fieldposx[vectorIndex] = field[i][j][0]; // lookang
+      fieldposy[vectorIndex] = field[i][j][1]; //lookang
+      computeField(field[i][j][0],field[i][j][1]);
+      var r=Math.sqrt(Ex*Ex+Ey*Ey);
+      field[i][j][2] = Ex/r;
+      field[i][j][3] = Ey/r;
+      var factor = 10 // arbitrary set by lookang to make size bigger
+      fieldsizex[vectorIndex]=field[i][j][2]*factor
+      fieldsizey[vectorIndex]=field[i][j][3]*factor
+      field[i][j][4] = r;
+      //console.log(field)
+    }
+  }
+  }
