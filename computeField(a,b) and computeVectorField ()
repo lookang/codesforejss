@@ -10,6 +10,24 @@
 //charge = 1 [maxParticles]
 //x =0 [maxParticles] // position x of charges
 //y =0 [maxParticles] // position y of charges
+// minimum  =-10
+// maximum  = 10
+
+
+//initialization
+var step = (maximum - minimum)/(resolution-1);
+for (var i=0; i<resolution; i++) {
+  for (var j=0; j<resolution; j++) {
+    field[i][j][0] = minimum + step*i;
+    field[i][j][1] = minimum + step*j;
+    potential[i][j][0] = minimum + step*i;
+    potential[i][j][1] = minimum + step*j;
+    //potentialz[i][j] = 0 // lookang
+  }
+}
+
+
+
 
 // a,b are coordinates like x,y
 function computeField (a,b) {
