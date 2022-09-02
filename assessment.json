@@ -1,0 +1,21 @@
+// added to singlePlotPanel OnPress to register initial values of interaction data
+if (first) {
+_view._addInteraction(function(){}  ,"Q1",{"property":"value", "element":"question"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox2"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox3"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox4"});
+ var option = _view.comboBox.getProperty("SelectedOptions")
+ console.log(option)
+first=false;
+}
+
+
+
+//code to add interactions for moodle assessment.json to pick up data
+_view._addInteraction(function(){}  ,"Q2",{"property":"value", "element":"question"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox2"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox3"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox4"});
+    
