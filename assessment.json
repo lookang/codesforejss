@@ -1,0 +1,184 @@
+// Example assessment json file
+{
+	"tasks": [ 
+		{ 	"name": "Q1", 
+			"description": "Question 1", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["1"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["1"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q1" },
+				"end" : {"element": "question", "property": "Value", "data": "Q2" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q2", 
+			"description": "Question 2", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["1"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["1"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q1" },
+				"end" : {"element": "question", "property": "Value", "data": "Q2" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q3", 
+			"description": "Question 3", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["1"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["3"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["2"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q3" },
+				"end" : {"element": "question", "property": "Value", "data": "Q4" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q4", 
+			"description": "Question 4", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["1"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["1"] },
+						{"element": "comboBox4", "property": "SelectedOptions", "data": ["2"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q4" },
+				"end" : {"element": "question", "property": "Value", "data": "Q5" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q5", 
+			"description": "Question 5", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["1"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["3"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox4", "property": "SelectedOptions", "data": ["2"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q5" },
+				"end" : {"element": "question", "property": "Value", "data": "Q6" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q6", 
+			"description": "Question 6", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["2"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["1"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["1"] },
+						{"element": "comboBox4", "property": "SelectedOptions", "data": ["2"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q6" },
+				"end" : {"element": "question", "property": "Value", "data": "Q7" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q7", 
+			"description": "Question 7", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["1"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["1"] },
+						{"element": "comboBox4", "property": "SelectedOptions", "data": ["1"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q7" },
+				"end" : {"element": "question", "property": "Value", "data": "Q8" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q8", 
+			"description": "Question 8", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["1"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["1"] },
+						{"element": "comboBox4", "property": "SelectedOptions", "data": ["1"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q8" },
+				"end" : {"element": "question", "property": "Value", "data": "Q9" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q9", 
+			"description": "Question 9", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["2"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["1"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox4", "property": "SelectedOptions", "data": ["1"] },
+						{"element": "comboBox5", "property": "SelectedOptions", "data": ["2"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q9" },
+				"end" : {"element": "question", "property": "Value", "data": "Q10" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q10", 
+			"description": "Question 10", 
+			"marks" : [
+				{ 	"value": "3",
+					"state": [
+						{"element": "comboBox", "property": "SelectedOptions", "data":["2"] },				
+						{"element": "comboBox2", "property": "SelectedOptions", "data": ["6"] },
+						{"element": "comboBox3", "property": "SelectedOptions", "data": ["2"] },
+						{"element": "comboBox4", "property": "SelectedOptions", "data": ["3"] },
+						{"element": "comboBox5", "property": "SelectedOptions", "data": ["3"] }
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q10" },
+				"end" : {"element": "question", "property": "Value", "data": "Q11" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		}
+	]	
+}
