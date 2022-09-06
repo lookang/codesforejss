@@ -18,4 +18,6 @@ _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "elem
 _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox2"});
 _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox3"});
 _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox4"});
-    
+   
+// error log   
+_view._addInteraction(function(){} , errorlog, {"property":"Value", "element": "textArea"});
