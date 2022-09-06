@@ -10,7 +10,9 @@ _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "elem
 first=false;
 }
 
-
+//fake interaction
+_view._addInteraction(function(){}  ,objectinteracted,{"property":"value", "element":"question"+objectinteracted});
+_view._addInteraction(function(){}  ,i,{"property":"value", "element":"answer"+i});
 
 //code to add interactions for moodle assessment.json to pick up data
 _view._addInteraction(function(){}  ,"Q2",{"property":"value", "element":"question"});
