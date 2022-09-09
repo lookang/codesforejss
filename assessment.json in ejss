@@ -1,3 +1,50 @@
+//define new variables
+first true boolean // use to detect first time ejss in loaded in moodle
+start      boolean // use to detect the start of the moodle log register started
+
+//new code in fixed relationship say moodle
+
+if (typeof _model.isRegisterStarted != 'undefined'){
+  start = _model.isRegisterStarted();
+  if (first&&start==true) {
+_view._addInteraction(function(){}  ,"Q1",{"property":"value", "element":"question"}); // use to detect beginning of Q1
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox1"}); // use to trigger interaction that user defaulted
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox2"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox3"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox4"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox5"});
+//var option = _view.comboBox.getProperty("SelectedOptions")
+ //console.log(option)
+first=false; // turn off first so the code runs only once
+}
+  }
+
+
+//plottingpanel TRMessage add code, use to signal the start of the moodle data register, to counter sometimes the register didnt start yet then student already clciking
+first?"click me to continue="+start:""
+
+
+//sometimes need to trigger fake interaction for moodle to record
+_view._addInteraction(function(){}  ,objectinteracted,{"property":"value", "element":"question"+objectinteracted});
+_view._addInteraction(function(){}  ,i,{"property":"value", "element":"answer"+i});
+
+
+//code to add interactions for moodle assessment.json to pick up data especially Q2
+_view._addInteraction(function(){}  ,"Q2",{"property":"value", "element":"question"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox"}); // may be needed for user normally dont click themselves
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox2"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox3"});
+_view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox4"});
+   
+// error log  is the variable with the stored log of mistakes and correct eventually etc 
+_view._addInteraction(function(){} , errorlog, {"property":"Value", "element": "textArea"});
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//older code
 // added to singlePlotPanel OnPress to register initial values of interaction data
 if (first) {
 _view._addInteraction(function(){}  ,"Q1",{"property":"value", "element":"question"});
