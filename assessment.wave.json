@@ -1,0 +1,175 @@
+// Example assessment json file
+{
+	"tasks": [ 
+		{ 	"name": "Q1", 
+			"description": "Question 1 on amplitude",  
+			"marks" : [
+				{ 	
+					"value": "0",
+					"state": [
+						{"element": "answer1", "property": "Value", "data": "Wrong" }
+						
+					],	
+					"value": "1",
+					"state": [
+						{"element": "answer1", "property": "Value", "data": "Correct" }
+						
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q1" },
+				"end" : {"element": "question", "property": "Value", "data": "Q2" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q2", 
+			"description": "Question 2 on wavelength", 
+			"marks" : [
+				{ 	
+					"value": "0",
+					"state": [
+					{"element": "answer2", "property": "Value", "data": "Wrong" }
+					
+				],	
+					"value": "1",
+					"state": [
+					{"element": "answer2", "property": "Value", "data": "Correct" }
+					
+				]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q2" },
+				"end" : {"element": "question", "property": "Value", "data": "Q3" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q3", 
+			"description": "Question 3 on period", 
+			"marks" : [
+				{ 	"value": "0",
+				"state": [
+					{"element": "answer3", "property": "Value", "data": "Wrong" }
+					
+				],	
+				"value": "1",
+				"state": [
+					{"element": "answer3", "property": "Value", "data": "Correct" }
+					
+				]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q3" },
+				"end" : {"element": "question", "property": "Value", "data": "Q4" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q4", 
+			"description": "Question 4 on frequency", 
+			"marks" : [
+				{ 	"value": "0",
+				"state": [
+					{"element": "answer4", "property": "Value", "data": "Wrong" }
+					
+				],	
+				"value": "1",
+				"state": [
+					{"element": "answer4", "property": "Value", "data": "Correct" }
+					
+				]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q4" },
+				"end" : {"element": "question", "property": "Value", "data": "Q5" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q5", 
+			"description": "Question 5 on angular frequency", 
+			"marks" : [
+				{ 	"value": "0",
+				"state": [
+					{"element": "answer5", "property": "Value", "data": "Wrong" }
+					
+				],	
+				"value": "1",
+				"state": [
+					{"element": "answer5", "property": "Value", "data": "Correct" }
+					
+				]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q5" },
+				"end" : {"element": "question", "property": "Value", "data": "Q6" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q6", 
+			"description": "Question 6 on phase difference", 
+			"marks" : [
+				{ 	"value": "0",
+				"state": [
+					{"element": "answer6", "property": "Value", "data": "Wrong" }
+					
+				],	
+				"value": "1",
+				"state": [
+					{"element": "answer6", "property": "Value", "data": "Correct" }
+					
+				]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q6" },
+				"end" : {"element": "question", "property": "Value", "data": "Q7" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q7", 
+			"description": "Question 7 on velocity", 
+			"marks" : [
+				{ 	"value": "0",
+				"state": [
+					{"element": "answer7", "property": "Value", "data": "Wrong" }
+					
+				],	
+				"value": "1",
+				"state": [
+					{"element": "answer7", "property": "Value", "data": "Correct" }
+					
+				]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q7" },
+				"end" : {"element": "question", "property": "Value", "data": "Q8" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q8", 
+			"description": "Question 8 on maximum velocity", 
+			"marks" : [
+				{ 	"value": "0",
+				"state": [
+					{"element": "answer8", "property": "Value", "data": "Wrong" }
+					
+				],	
+				"value": "1",
+				"state": [
+					{"element": "answer8", "property": "Value", "data": "Correct" }
+					
+				]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q8" },
+				"end" : {"element": "question", "property": "Value", "data": "Q9" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		}
+	]	
+}
