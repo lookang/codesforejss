@@ -1,0 +1,72 @@
+// Example assessment json file
+{
+	"tasks": [ 
+		{ 	"name": "Q1", 
+			"description": "Question 1",  
+			"marks" : [
+				{ 	"value": "1",
+					"state": [
+						{ "element": "models", "property": "SelectedOptions", "data": ["1.4"] }
+						
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q1" },
+				"end" : {"element": "question", "property": "Value", "data": "Q2" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q2", 
+			"description": "apple", 
+			"marks" : [
+				{ 	"value": "1",
+					"state": [
+						{ "element": "models", "property": "SelectedOptions", "data": ["0.1"] }				
+						//{"element": "comboBox2", "property": "SelectedOptions", "equals" : "answer" }
+						
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q2" },
+				"end" : {"element": "question", "property": "Value", "data": "Q3" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q3", 
+			"description": "pineapple", 
+			"marks" : [
+				{ 	"value": "1",
+					"state": [
+						{ "element": "models", "property": "SelectedOptions",  "data": ["0.9"]}				
+						//{"element": "comboBox2", "property": "SelectedOptions", "equals" : "answer" }
+						
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q3" },
+				"end" : {"element": "question", "property": "Value", "data": "Q4" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		},
+		{ 	"name": "Q4", 
+			"description": "random", 
+			"marks" : [
+				{ 	"value": "1",
+					"state": [
+						{ "element": "models", "property": "SelectedOptions",  "equals" : "answer" }				
+						//{"element": "comboBox2", "property": "SelectedOptions", "equals" : "answer" }
+						
+					]
+				}
+			],
+			"events": {
+				"start": {"element": "question", "property": "Value", "data": "Q4" },
+				"end" : {"element": "question", "property": "Value", "data": "Q5" }
+			},
+			"history": {"element": "textArea", "property": "Value" }
+		}
+	]	
+}
