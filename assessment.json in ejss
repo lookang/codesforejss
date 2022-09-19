@@ -21,7 +21,10 @@ first=false; // turn off first so the code runs only once
 
 
 //plottingpanel TRMessage add code, use to signal the start of the moodle data register, to counter sometimes the register didnt start yet then student already clciking
-first?"click me to continue="+start:""
+// this code will not display in non-moodle deployment
+(typeof _model.isRegisterStarted == 'undefined')?"":first?"Moodle click me to continue="+start:""
+
+//first?"click me to continue="+start:""
 
 
 //sometimes need to trigger fake interaction for moodle to record
