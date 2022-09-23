@@ -71,5 +71,8 @@ _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "elem
 _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox3"});
 _view._addInteraction(function(){} , ["1"], {"property":"SelectedOptions", "element": "comboBox4"});
    
-// error log   
+// error log must be a string, if it is an array use error.toString() to convert to overcome error
+////Warning: nl2br() expects parameter 1 to be string, array given in /home/iwtstudy/public_html/moodle402/mod/laejss/report_lti.php on line 170
 _view._addInteraction(function(){} , errorlog, {"property":"Value", "element": "textArea"});
+// or
+_view._addInteraction(function(){} , answerkeylog.toString(), {"property":"Value", "element": "textArea"});
