@@ -1,0 +1,73 @@
+const _debugMode = false;
+const questionStack = [];
+const questionHistory = Object.create(null);
+
+const _nullFunction = _debugMode ? 
+  console.log
+  :
+  function(){};
+
+
+// for assessment.json event - start
+function startQuestion(questionName) {
+  _view._addInteraction(_nullFunction, {action:"questionStart", name:questionName}, {element:"questionLib", property:"value"});
+  questionStack.push(questionName);
+}
+
+// for assessment.json history
+function _addQuestionHistory(questionName, history) {
+  if (!(questionName in questionHistory)) {
+    questionHistory[questionName] = [];
+  }
+  questionHistory[questionName].push(history);
+}
+
+function _getQuestionHistory(questionName) {
+  if (questionName in questionHistory) {
+    return questionHistory[questionName].join("\n");
+  } else {
+    return "";
+  }
+}
+
+function addQuestionHistory(history) {
+  if (questionStack.length > 0) {
+    const questionName = questionStack[questionStack.length - 1];
+    _addQuestionHistory(questionName, history);
+  }
+}
+
+// for assessment.json event - states
+function onAnswer(answer, isCorrect=false, history=answer) {
+  if (questionStack.length > 0) {
+    const explainer = {};
+    //explainer[true] = " (correct)";
+    explainer[true] = " ✅"; // added unicode
+    //explainer[false] = " (incorrect)";
+    explainer[false] = " ❌"; // added unicode
+    const questionName = questionStack[questionStack.length - 1];
+
+    _addQuestionHistory(questionName, history + explainer[isCorrect]);
+    const outputHistory = _getQuestionHistory(questionName);
+
+    _view._addInteraction(_nullFunction, {name:questionName, answer:answer, isCorrect:isCorrect, action:"questionAnswer"}, {property: "answer", element:"questionLib"});
+    _view._addInteraction(_nullFunction, outputHistory, {property: "history", element: "questionLib"});
+  }
+}
+
+// for assessment.json event - end
+function endQuestion() {
+  if (questionStack.length > 0) {
+    const questionName = questionStack.pop();
+    _view._addInteraction(_nullFunction, {action:"questionEnd", name:questionName}, {element: "questionLib", property: "value"});
+  }
+}
+
+
+// for assessment.json marks
+function awardQuestionMarks(marks=1) {
+  if (questionStack.length > 0) {
+    const questionName = questionStack[questionStack.length - 1];
+    _view._addInteraction(_nullFunction, marks, {element:"questionLib", property:"awardMarkFor"+questionName});
+  }
+}
