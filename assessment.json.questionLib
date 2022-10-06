@@ -1,3 +1,28 @@
+// code written by rytan451 20221006
+// to be used in ejss custom library, create a new tab and copy paste copy inside
+// EVENT START - to use paste something to start, needs to be intelligently find a good place to paste the next 3 lines
+const questionName = "Q" + (interact + 1) //moodle
+startQuestion(questionName); //moodle
+addQuestionHistory(questions[0]); //moodle question[0] = Does it have a fixed shape?
+
+
+// another way to START
+ startQuestion("Q" + (interact + 1)); //moodle
+ 
+ //award MARKS
+ awardQuestionMarks(); //moodle
+ 
+ //EVENT - END
+ endQuestion();  //moodle
+
+//HISTORY BEGIN
+addQuestionHistory(questions[0]); //moodle question[0] = Does it have a fixed shape?
+
+// HISTORY ADD
+_addQuestionHistory("Q" + (interact + 1), animals[i] + " ❌"); //moodle
+
+
+// to paste in CUSTOM FUNCTION of EJSS EDITOR
 const _debugMode = false;
 const questionStack = [];
 const questionHistory = Object.create(null);
