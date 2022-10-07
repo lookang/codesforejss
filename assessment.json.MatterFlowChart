@@ -1,0 +1,76 @@
+{
+	"tasks": [
+		{
+			"name": "Q1",
+			"description": "Solid",
+			"marks": [
+				{
+					"value": "1",
+					"state": [
+						{
+							"element": "questionLib",
+							"property": "awardMarkForQ1",
+							"data": 1
+						}
+					]
+				}
+			],
+			"events": {
+				"start": { "element": "questionLib", "property": "value", "data": {"action":"questionStart","name":"Q1"} },
+				"end": { "element": "questionLib", "property": "value", "data": {"action":"questionEnd","name":"Q1"} }
+			},
+			"history": {
+				"element": "questionLib",	
+				"property": "history"
+			}
+		},
+		{
+			"name": "Q2",
+			"description": "Liquid",
+			"marks": [
+				{
+					"value": "1",
+					"state": [
+						{
+							"element": "questionLib",
+							"property": "awardMarkForQ2",
+							"data": 1
+						}
+					]
+				}
+			],
+			"events": {
+				"start": { "element": "questionLib", "property": "value", "data": {"action":"questionStart","name":"Q2"} },
+				"end": { "element": "questionLib", "property": "value", "data": {"action":"questionEnd","name":"Q2"} }
+			},
+			"history": {
+				"element": "questionLib",	
+				"property": "history"
+			}
+		},
+		{
+			"name": "Q3",
+			"description": "Gas",
+			"marks": [
+				{
+					"value": "1",
+					"state": [
+						{
+							"element": "questionLib",
+							"property": "awardMarkForQ3",
+							"data": 1
+						}
+					]
+				}
+			],
+			"events": {
+				"start": { "element": "questionLib", "property": "value", "data": {"action":"questionStart","name":"Q3"} },
+				"end": { "element": "questionLib", "property": "value", "data": {"action":"questionEnd","name":"Q3"} }
+			},
+			"history": {
+				"element": "questionLib",	
+				"property": "history"
+			}
+		}
+	]
+}
