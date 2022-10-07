@@ -4,6 +4,17 @@ start      boolean // use to detect the start of the moodle log register started
 
 //new code in fixed relationship say moodle
 
+
+if (typeof _model.isRegisterStarted != 'undefined'){
+  start = _model.isRegisterStarted();
+  if (first && start) {
+  first=false; // turn off first so the code runs only once
+  }
+}
+
+
+
+//older code
 if (typeof _model.isRegisterStarted != 'undefined'){
   start = _model.isRegisterStarted();
   if (first&&start==true) {
