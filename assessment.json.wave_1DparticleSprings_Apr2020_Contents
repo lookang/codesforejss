@@ -1,0 +1,118 @@
+{
+  "tasks": [
+    {
+      "name": "Seen Low Stiffness",
+      "description": "",
+      "marks": [
+        {
+          "value": "1",
+          "state": [
+            {
+              "element": "questionLib",
+              "property": "awardMarkForseeSpringAtLowStiffness",
+              "data": 1
+            }
+          ]
+        }
+      ],
+      "events": {
+        "start": {
+          "element": "questionLib",
+          "property": "value",
+          "data": {
+            "action": "questionStart",
+            "name": "seeSpringAtLowStiffness"
+          }
+        },
+        "end": {
+          "element": "questionLib",
+          "property": "value",
+          "data": {
+            "action": "questionEnd",
+            "name": "seeSpringAtLowStiffness"
+          }
+        }
+      },
+      "history": {
+        "element": "questionLib",
+        "property": "historyForseeSpringAtLowStiffness"
+      }
+    },
+    {
+      "name": "Seen Medium Stiffness",
+      "description": "",
+      "marks": [
+        {
+          "value": "1",
+          "state": [
+            {
+              "element": "questionLib",
+              "property": "awardMarkForseeSpringAtMediumStiffness",
+              "data": 1
+            }
+          ]
+        }
+      ],
+      "events": {
+        "start": {
+          "element": "questionLib",
+          "property": "value",
+          "data": {
+            "action": "questionStart",
+            "name": "seeSpringAtMediumStiffness"
+          }
+        },
+        "end": {
+          "element": "questionLib",
+          "property": "value",
+          "data": {
+            "action": "questionEnd",
+            "name": "seeSpringAtMediumStiffness"
+          }
+        }
+      },
+      "history": {
+        "element": "questionLib",
+        "property": "historyForseeSpringAtMediumStiffness"
+      }
+    },
+    {
+      "name": "Seen High Stiffness",
+      "description": "",
+      "marks": [
+        {
+          "value": "1",
+          "state": [
+            {
+              "element": "questionLib",
+              "property": "awardMarkForseeSpringAtHighStiffness",
+              "data": 1
+            }
+          ]
+        }
+      ],
+      "events": {
+        "start": {
+          "element": "questionLib",
+          "property": "value",
+          "data": {
+            "action": "questionStart",
+            "name": "seeSpringAtHighStiffness"
+          }
+        },
+        "end": {
+          "element": "questionLib",
+          "property": "value",
+          "data": {
+            "action": "questionEnd",
+            "name": "seeSpringAtHighStiffness"
+          }
+        }
+      },
+      "history": {
+        "element": "questionLib",
+        "property": "historyForseeSpringAtHighStiffness"
+      }
+    }
+  ]
+}
