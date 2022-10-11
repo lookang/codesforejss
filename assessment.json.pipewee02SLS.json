@@ -1,0 +1,118 @@
+{
+    "tasks": [
+        {
+            "name": "Has pressed play",
+            "description": "",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForHas pressed play",
+                            "data": 1
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Has pressed play"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Has pressed play"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForHas pressed play"
+            }
+        },
+        {
+            "name": "Changed openness",
+            "description": "",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForChanged openness",
+                            "data": 1
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Changed openness"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Changed openness"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForChanged openness"
+            }
+        },
+        {
+            "name": "Changed harmonic",
+            "description": "",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForChanged harmonic",
+                            "data": 1
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Changed harmonic"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Changed harmonic"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForChanged harmonic"
+            }
+        }
+    ]
+}
