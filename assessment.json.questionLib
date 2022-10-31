@@ -21,8 +21,123 @@ addQuestionHistory(questions[0]); //moodle question[0] = Does it have a fixed sh
 // HISTORY ADD
 _addQuestionHistory("Q" + (interact + 1), animals[i] + " ❌"); //moodle
 
+// to paste in CUSTOM FUNCTION of EJSS EDITOR 2022 11
 
-// to paste in CUSTOM FUNCTION of EJSS EDITOR
+const debugMode = true;
+const _questionStack = [];
+const _questionHistory = Object.create(null);
+const _questionInstantMarksAwarded = Object.create(null);
+
+const _nullFunction = debugMode ? 
+  console.log
+  :
+  function(){};
+
+function _debugPrint(msg) {
+  if (debugMode) {
+    console.log(msg);
+  }
+}
+
+function isQuestionStarted() {
+  return _questionStack.length > 0;
+}
+
+// for assessment.json event - start
+function startQuestion(questionName) {
+  _view._addInteraction(_nullFunction, {action:"questionStart", name:questionName}, {element:"questionLib", property:"value"});
+  _debugPrint("Start question: " + questionName);
+  
+  _questionStack.push(questionName);
+}
+
+// for assessment.json history
+function _addQuestionHistory(questionName, history) {
+  if (!(questionName in _questionHistory)) {
+    _debugPrint("Create question history for " + questionName);
+    
+    _questionHistory[questionName] = [];
+  }
+  if (debugMode) {
+    console.log("Push \"" + history + "\" to question history for " + questionName);
+  }
+  _questionHistory[questionName].push(history);
+  _flushQuestionHistory(questionName);
+}
+
+function _flushQuestionHistory(questionName) {
+  // TODO: check if need to flush
+  const outputHistory = _getQuestionHistory(questionName);
+  _view._addInteraction(_nullFunction, outputHistory, {property: "historyFor" + questionName, element: "questionLib"});
+}
+
+function _getQuestionHistory(questionName) {
+  if (questionName in _questionHistory) {
+    return _questionHistory[questionName].join("\n");
+  } else {
+    _debugPrint("No question \"" + questionName + "\" exists");
+
+    return "";
+  }
+}
+
+function addQuestionHistory(history) {
+  if (_questionStack.length > 0) {
+    const questionName = _questionStack[_questionStack.length - 1];
+    _addQuestionHistory(questionName, history);
+  }
+}
+
+// for assessment.json event - states
+function onAnswer(answer, isCorrect=false, history=answer) {
+  if (_questionStack.length > 0) {
+    const explainer = Object.create(null);
+    explainer[true] = " ✅";
+    explainer[false] = " ❌";
+    const questionName = _questionStack[_questionStack.length - 1];
+
+    addQuestionHistory(history + explainer[isCorrect]);
+    
+    _view._addInteraction(_nullFunction, {name:questionName, answer:answer, isCorrect:isCorrect, action:"questionAnswer"}, {property: "answer", element:"questionLib"});
+  }
+}
+
+// for assessment.json event - end
+function endQuestion() {
+  if (_questionStack.length > 0) {
+    const questionName = _questionStack.pop();
+    _debugPrint("End question: " + questionName);
+    _view._addInteraction(_nullFunction, {action:"questionEnd", name:questionName}, {element: "questionLib", property: "value"});
+  }
+}
+
+
+// for assessment.json marks
+function awardQuestionMarks(marks=1) {
+  if (_questionStack.length > 0) {
+    const questionName = _questionStack[_questionStack.length - 1];
+    _view._addInteraction(_nullFunction, marks, {element:"questionLib", property:"awardMarkFor"+questionName});
+  }
+}
+
+function questionInstantMark(questionName, message) {
+  if (!(questionName in _questionInstantMarksAwarded)) {
+    _questionInstantMarksAwarded[questionName] = true;
+    startQuestion(questionName);
+    _debugPrint("" + message);
+    if (message) {
+      addQuestionHistory(message);
+    }
+    awardQuestionMarks();
+    endQuestion();
+  }
+}
+
+
+
+// to paste in CUSTOM FUNCTION of EJSS EDITOR 2022 10
+
+
 const _debugMode = false;
 const questionStack = [];
 const questionHistory = Object.create(null);
