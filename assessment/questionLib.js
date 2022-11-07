@@ -17,6 +17,13 @@ function _debugPrint(msg) {
   }
 }
 
+function _getCurrentQuestion() {
+  if (!isQuestionStarted()) {
+    return null;
+  }
+  return _questionLib.stack[_questionLib.stack.length - 1];
+}
+
 function isQuestionStarted() {
   return _questionLib.stack.length > 0;
 }
@@ -31,9 +38,10 @@ function startQuestion(questionName) {
 
 // for assessment.json history
 function addQuestionHistory(history, questionName=null) {
-  if (questionName === null && _questionLib.stack.length > 0) {
-    questionName = _questionLib.stack[_questionLib.stack.length - 1];
+  if (questionName === null && isQuestionStarted()) {
+    questionName = _getCurrentQuestion();
   }
+  
   if (!(questionName in _questionLib.history)) {
     _debugPrint("Create question history for " + questionName);
     
@@ -48,8 +56,10 @@ function addQuestionHistory(history, questionName=null) {
 
 function _flushQuestionHistory(questionName) {
   // TODO: check if need to flush
-  const outputHistory = _getQuestionHistory(questionName);
-  _view._addInteraction(_nullFunction, outputHistory, {property: "historyFor" + questionName, element: "questionLib"});
+  if (questionName === _getCurrentQuestion()) {
+    const outputHistory = _getQuestionHistory(questionName);
+    _view._addInteraction(_nullFunction, outputHistory, {property: "historyFor" + questionName, element: "questionLib"});
+  }
 }
 
 function _getQuestionHistory(questionName) {
@@ -64,7 +74,7 @@ function _getQuestionHistory(questionName) {
 
 // for assessment.json event - states
 function onAnswer(answer, isCorrect=false, history=answer, questionName=null) {
-  if (questionName === null && _questionLib.stack.length > 0) {
+  if (questionName === null && isQuestionStarted()) {
     questionName = _questionLib.stack[_questionLib.stack.length - 1];
   }
   if (questionName !== null) {
@@ -73,8 +83,9 @@ function onAnswer(answer, isCorrect=false, history=answer, questionName=null) {
     explainer[false] = " ❌";
 
     addQuestionHistory(history + explainer[isCorrect], questionName);
-    
-    _view._addInteraction(_nullFunction, {name:questionName, answer:answer, isCorrect:isCorrect, action:"questionAnswer"}, {property: "answer", element:"questionLib"});
+    if (questionName === _getCurrentQuestion()) {
+      _view._addInteraction(_nullFunction, {name:questionName, answer:answer, isCorrect:isCorrect, action:"questionAnswer"}, {property: "answer", element:"questionLib"});
+    }
   }
 }
 
@@ -89,13 +100,12 @@ function endQuestion() {
 
 // for assessment.json marks
 function awardQuestionMarks(marks=1) {
-  if (_questionLib.stack.length > 0) {
-    const questionName = _questionLib.stack[_questionLib.stack.length - 1];
-    if (!(questionName in _questionLib.questionMarksAwarded)) {
-      _questionLib.questionMarksAwarded[questionName] = 0;
-    }
-    for (; _questionLib.questionMarksAwarded[questionName] < marks; _questionLib.questionMarksAwarded[questionName]++) {
-      _view._addInteraction(_nullFunction, _questionLib.questionMarksAwarded[questionName] + 1, {element:"questionLib", property:"awardMarkFor"+questionName});
+  if (isQuestionStarted()) {
+    const questionName = _getCurrentQuestion();
+    _questionLib.questionMarksAwarded[questionName] = 1;
+    
+    for (; _questionLib.questionMarksAwarded[questionName] < marks + 1; _questionLib.questionMarksAwarded[questionName]++) {
+      _view._addInteraction(_nullFunction, _questionLib.questionMarksAwarded[questionName], {element:"questionLib", property:"awardMarkFor"+questionName});
     }
   }
 }
@@ -120,10 +130,15 @@ function questionAppendHistory(questionName, message) {
   if (!(questionName in _questionLib.questionMarksAwarded)) {
     _questionLib.questionMarksAwarded[questionName] = 0;
   }
-  startQuestion(questionName);
+  let shouldPushQuestion = _getCurrentQuestion() !== questionName;
+  if (shouldPushQuestion) {
+    startQuestion(questionName);
+  }
   awardQuestionMarks(_questionLib.questionMarksAwarded[questionName])
   addQuestionHistory(message);
-  endQuestion();
+  if (shouldPushQuestion) {
+    endQuestion();
+  }
 }
 
 function resetQuestionHistory(questionName) {
