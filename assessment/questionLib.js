@@ -1,3 +1,35 @@
+//Variable
+
+//isQuestionAnswered = false // used in checking if Question is answered before 
+//isFirstTry = true  //used in checking if is First Try for marks award 2 instead of 1
+
+//How to use isQuestionStarted() cos Moodle and EJSS hasnt started "talking"
+if (!isQuestionStarted() && !isQuestionAnswered) {
+    startQuestion("Measurement"); //moodle part of the start
+    //addQuestionHistory(`Target Measurement: ${l_answer}`); //moodle part of the history
+    addQuestionHistory(`Target Measurement: ${l_msg}`); //moodle part of the history
+  }
+//expected output
+//Target Measurement: d = 11.0+0.11-(0.00)= 11.11 mm
+
+
+// display of history
+onAnswer(l_enterK1f, l_answer == l_enterK1f);
+//expected output
+//0.05 ❌
+//11.11 ✅
+
+
+if (isFirstTry) {
+      awardQuestionMarks(2);
+    } else {
+      awardQuestionMarks(1);
+    }
+    endQuestion(); // stamp the end of Question
+    isQuestionAnswered = true; 
+
+
+
 // Assume ECMAScript 6; Chrome >=49, Edge >=14, Firefox >=41, Opera >=36, Safari >=8
 
 const debugMode = true;
