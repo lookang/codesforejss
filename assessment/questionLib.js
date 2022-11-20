@@ -3,6 +3,11 @@
 //isQuestionAnswered = false // used in checking if Question is answered before 
 //isFirstTry = true  //used in checking if is First Try for marks award 2 instead of 1
 
+//Initialisation
+//lookang need to add this startQuestion to start immediately after game starts 
+startQuestion(`Q${correct + 1}`);
+
+
 //How to use isQuestionStarted() cos Moodle and EJSS hasnt started "talking"
 if (!isQuestionStarted() && !isQuestionAnswered) {
     startQuestion("Measurement"); //moodle part of the start
