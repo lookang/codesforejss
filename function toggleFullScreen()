@@ -1,3 +1,40 @@
+//updated to address Firefox
+//https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
+// does not work for iOS 
+/*jslint browser:true */
+function toggleFullScreen() {
+  try {
+    if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // current working methods
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) {
+        document.documentElement.msRequestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) { //Standard
+        document.exitFullscreen();
+      } else if (document.msExitFullscreen) { //Internet Explorer 11
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) { //Gecko (Firefox)
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) { //Safari (WebKit)
+        document.webkitExitFullscreen();
+      }
+    }
+  } catch (e) {
+    //
+  }
+}
+
+
+
+
+
 //https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
 // does not work for iOS 
 /*jslint browser:true */
