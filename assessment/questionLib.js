@@ -7,6 +7,13 @@
 //lookang need to add this startQuestion to start immediately after game starts 
 startQuestion(`Q${correct + 1}`);
 
+//Play button example
+//How to use isQuestionStarted() cos Moodle and EJSS hasnt started "talking"
+if (!isQuestionStarted() && !isQuestionAnswered) {
+   startQuestion(`Q${stage}`); //moodle part of the start
+    //addQuestionHistory(`Target Measurement: ${l_answer}`); //moodle part of the history
+    addQuestionHistory(`v1= ${v1}, v1answer= ${v1answer}`); //moodle part of the history
+  }
 
 //How to use isQuestionStarted() cos Moodle and EJSS hasnt started "talking"
 if (!isQuestionStarted() && !isQuestionAnswered) {
