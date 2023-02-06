@@ -6,6 +6,8 @@
 //Initialisation
 //lookang need to add this startQuestion to start immediately after game starts 
 startQuestion(`Q${correct + 1}`);
+//or
+startQuestion(`Q${1}`);
 
 //Play button example
 //How to use isQuestionStarted() cos Moodle and EJSS hasnt started "talking"
@@ -36,6 +38,7 @@ if (isFirstTry) {
       awardQuestionMarks(2);
     } else {
       awardQuestionMarks(1);
+       isFirstTry =true // set back to true for next question
     }
     endQuestion(); // stamp the end of Question
     isQuestionAnswered = true; 
