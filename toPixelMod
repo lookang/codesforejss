@@ -1,0 +1,4 @@
+//Properties for Image SizeX and SizeY
+// to ensure always square in size
+_view.plottingPanel.toPixelMod([radiusx[0],0])[0]
+_view.plottingPanel.toPixelMod([radiusx[0],0])[0]
