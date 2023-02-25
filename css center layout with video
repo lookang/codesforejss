@@ -1,0 +1,55 @@
+// to achieve a center layout
+//use cssPanelAndy
+// in Variable declare
+cssPanelAndy = {  "display": "flex",         "justify-content": "center",     "align-items": "center"}
+
+//copy cssPanelAndy into the CSS of a parent Panel // purpose is to use display flex to center all contents inside this parent
+//set the CSS of the plottingPanel to {"position":"absolute","top":"2vh"} // purpose is to force the postion up to "2vh" so it overlay over the EJSS video elements 
+
+
+//code below shared by andy luo
+//index.html
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>example centre</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="panel"></div>
+        </div>
+        
+
+    </body>
+</html>
+
+// css
+body {
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.panel {
+    width: 300px;
+    height: 100px;
+    background-color: aliceblue;
+}
