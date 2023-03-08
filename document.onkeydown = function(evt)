@@ -1,0 +1,18 @@
+//Variable
+//escKeyPressed = boolean to control certain thing from true
+
+
+// copy into custom function
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+        isEscape = (evt.keyCode === 27);
+    }
+    if (isEscape) {
+        //alert("Escape");
+        escKeyPressed = true
+    }
+};
