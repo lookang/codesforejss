@@ -40,3 +40,9 @@ displaytemperature = "inline-block"
 
 //disabledworld=false;
 }
+
+
+
+// this is to overcome older code to control such as
+expt==1?"inline-block":"none"
+//which causes error as some display is set to "none" in the beginning and unable to toggle to "inline-block"
