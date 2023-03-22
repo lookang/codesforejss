@@ -1,0 +1,42 @@
+//variables
+displaydistance "inline-block"
+displaycarbondioxide "inline-block"
+displaytemperature "inline-block"
+
+in plottingPanel display
+displaycarbondioxide
+displaycarbondioxide
+displaytemperature
+
+
+//in combobox control
+ if ( option=="both expt 1"){
+world=true;
+expt =0
+displaydistance = "inline-block"
+displaycarbondioxide = "none"
+displaytemperature = "none"
+//_view._update();
+//disabledworld=false;
+}
+else if ( option=="both expt 2"){
+world=true;
+expt =2
+displaydistance = "none"
+displaycarbondioxide = "inline-block"
+displaytemperature = "none"
+//_view._update();
+//disabledworld=false;
+}
+else if ( option=="both expt 3"){
+world=true;
+expt =3
+displaydistance = "none"
+displaycarbondioxide = "none"
+displaytemperature = "inline-block"
+//_view._update();
+//assume remember expt 
+
+
+//disabledworld=false;
+}
