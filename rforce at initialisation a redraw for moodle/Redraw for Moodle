@@ -1,0 +1,18 @@
+//Variables
+clicked = blank boolean so that it is undefined
+
+//Initialization
+if (clicked==undefined){
+  clicked=false // catch the clicked as false at the beginning
+  }
+
+
+//Initialization
+if (!clicked){
+  _tools.showOkDialog("Loading....click 'OK' to continue",
+    function(){ 
+    clicked=true;  
+    _reset(); // to force update view
+    //clicked=true;
+    });
+    }
