@@ -1,9 +1,10 @@
 //bing
+
 const myArray = [1, 2, 3, 4, 5];
 const randomElement = getRandomElementFromArray(myArray);
 console.log(randomElement);
 
-
+// This function takes an array as an argument and returns a random element from it. The Math.random() function generates a random number between 0 and 1 (exclusive). We multiply this number by the length of the array to get a random index within the bounds of the array. We then use Math.floor() to round down to the nearest integer, which gives us a valid index for the array.
 function getRandomElementFromArray(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
