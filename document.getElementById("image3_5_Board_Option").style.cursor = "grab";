@@ -1,0 +1,2 @@
+// super way to get the cursor to cursor by fazli
+document.getElementById("image3_5_Board_Option").style.cursor = "grab";
