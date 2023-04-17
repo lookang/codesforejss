@@ -1,0 +1,25 @@
+//written by ryan451
+//copy to custom function of ejss
+
+//version 2
+/**
+ * @async
+ * @function attemptLoadGraph
+ * @returns {Promise<object>} Promise resolved: an object representing the data that was loaded
+ */
+
+async function attemptLoadGraph() {
+  const graphResponse = await fetch("records.json");
+  const graphSettings = await graphResponse.json();
+  return graphSettings;
+}
+/*
+Use like this:
+
+attemptLoadGraph().then(function(data) {
+  uiVariable1 = data.uiVariable1;
+  buttonText = data.buttonText;
+  _view.update();
+});
+
+*/
