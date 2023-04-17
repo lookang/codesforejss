@@ -1,0 +1,91 @@
+// written by ryan451
+version 2
+/**
+ * @param {object} exportObject 
+ * @param {string} filename 
+ */
+async function exportGraph(exportObject, filename="export.zip") {
+  // Get the zipped export template
+  const exportTemplatePath = "export-template.zip";
+  const graphFileName = "records.json";
+
+  let exportZip = await getZipFromPath(exportTemplatePath);
+
+  exportZip.file(graphFileName, JSON.stringify(exportObject));
+  exportZip.generateAsync({type: "blob"}).then(blob => saveAs(blob, filename));
+}
+/*
+Use like this:
+var data = {
+  uiVariable1: uiVariable1,
+  buttonText: buttonText
+};
+exportGraph(data);
+*/
+
+
+async function getZipFromPath(path) {
+  return await JSZip.loadAsync(await (await fetch(path)).blob());
+}
+
+function saveBlob(blob, filename) {
+  var elem = window.document.createElement("a");
+  var objectUrl = window.URL.createObjectURL(blob);
+  elem.href = objectUrl;
+  elem.download = filename;
+  elem.click();
+  
+  // Cleanup allocated objects to avoid memory leaks
+  // These objects do not get GCed
+  setTimeout(function(elem, objectUrl) {
+    elem.remove();
+    window.URL.revokeObjectURL(objectUrl);
+  }, 1_000, elem, objectUrl);
+}
+
+
+
+
+//version 1
+async function exportGraph(exportObject, filename="export.zip") {
+  // Get the zipped export template
+  const exportTemplatePath = "export-template.zip";
+  const graphFileName = "records.json";
+
+  //const IS_TESTING_EXPORT = true;
+
+  let exportZip;
+  //if (IS_TESTING_EXPORT) {
+   // exportZip = new JSZip();
+  //} else {
+    exportZip = await getZipFromPath(exportTemplatePath);
+  //}
+
+  exportZip.file(graphFileName, JSON.stringify(exportObject));
+
+  exportZip.generateAsync({type: "blob"}).then(blob => saveAs(blob, filename));
+}
+
+function onGraphExportComplete() {
+  alert("Export complete");
+}
+
+async function getZipFromPath(path) {
+  return await JSZip.loadAsync(await (await fetch(path)).blob());
+}
+
+function saveBlob(blob, filename) {
+  var elem = window.document.createElement("a");
+  var objectUrl = window.URL.createObjectURL(blob);
+  elem.href = objectUrl;
+  elem.download = filename;
+  elem.click();
+  
+  // Cleanup allocated objects to avoid memory leaks
+  // These objects do not get GCed
+  setTimeout(function(elem, objectUrl) {
+    elem.remove();
+    window.URL.revokeObjectURL(objectUrl);
+  }, 1_000, elem, objectUrl);
+}
+
