@@ -1,6 +1,7 @@
 //sometime ejss view need to force update
 
-_view._update();
-
-//alternate
+//alternate that works better and tested to work with  loading json
 _update();
+
+_view._update(); // may not work as well especially if loading json
+
