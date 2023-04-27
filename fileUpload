@@ -1,0 +1,113 @@
+// copy this code into the fileUpload icon element
+
+//1st button
+var target = _view.fileUpload.getTarget();
+if (target.files[0]) {
+  let file = target.files[0] // file object
+  readcsv(file, 0)
+  //_update();
+}
+//_update();
+
+
+//2nd button
+var target = _view.fileUpload2.getTarget();
+if (target.files[0]) {
+  let file = target.files[0] // file object
+  readcsv(file, 1)
+  //_update();
+}
+//_update();
+
+
+//3rd button
+var target = _view.fileUpload3.getTarget();
+if (target.files[0]) {
+  let file = target.files[0] // file object
+  readcsv(file, 2)
+  //_update();
+}
+
+//custom function
+function readcsv (file, graphNo) {
+  // Create a new FileReader object
+  //The FileReader object in JavaScript is used to read data from a file asynchronously. It provides a way to read the contents of a file as a string or an array buffer.
+  //To use the FileReader object, you first need to create a new instance of it using the new keyword. Then you can use various methods of the object to read the file data.
+  //For example, to read a file as a text string, you can use the readAsText() method. This method takes a file object as its parameter and starts reading the file. Once the file is read, the onload event of the FileReader object is triggered, and you can access the contents of the file using the result property of the FileReader object.
+
+  const reader = new FileReader();
+  
+  // Set a callback function to handle the file contents once it's loaded
+  //The code sets a callback function to handle the file contents once it's loaded, which is triggered by the onload event of the FileReader object. Inside the callback function, the CSV data is split into an array of rows using the split() method with the '\n' delimiter, which represents a line break. The first row of the CSV data (header row) is also split into an array of column names using the split() method with the ',' delimiter.
+
+  reader.onload = function(event) {
+        const csvData = event.target.result;
+    
+    // Split the CSV data into an array of rows
+    const rows = csvData.split('\n');
+    
+    // Split the first row (header row) into an array of column names
+    const headers = rows[0].split(',');
+    
+    // Create an array to hold the parsed data
+    const data = [];
+    
+    // Loop through the rows (starting at index 1 to skip the header row)
+    //Then, an empty array is created to hold the parsed data. A loop is used to iterate through each row (starting at index 1 to skip the header row) and split the row into an array of values using the split() method with the ',' delimiter. An object is then created to represent the row data, and another loop is used to iterate through the column names and values and add them to the row object using the square bracket notation to dynamically set the property name.
+
+    for (let i = 1; i < rows.length; i++) {
+      // Split the row into an array of values
+      const values = rows[i].split(',');
+      
+      // Create an object to represent the row data
+            const row = {};
+      
+      // Loop through the column names and values, and add them to the row object
+      for (let j = 0; j < headers.length; j++) {
+      //the Number() function is used to convert the values to numbers. 
+        row[headers[j]] = Number(values[j]);
+      }
+      
+      // push data into variable
+      let point_x = row['x']
+      let point_y = row['y']
+      let point = [point_x, point_y]
+      let text = "(" + point.toString() + ")"
+
+      if (graphNo == 0) {
+        ptpMarkerX.push(point_x)
+        ptpMarkerY.push(point_y)
+        ptpPoints.push(point)
+        ptpMarkerText.push(text)
+        ptpMarkerTextVisible.push(false)
+      }
+      if (graphNo == 1) {
+        ptpMarkerX1.push(point_x)
+        ptpMarkerY1.push(point_y)
+        ptpPoints1.push(point)
+        ptpMarkerText1.push(text)
+        ptpMarkerTextVisible1.push(false)
+      }
+      if (graphNo == 2) {
+        ptpMarkerX2.push(point_x)
+        ptpMarkerY2.push(point_y)
+        ptpPoints2.push(point)
+        ptpMarkerText2.push(text)
+        ptpMarkerTextVisible2.push(false)
+      }
+      
+      // Add the row object to the data array
+      data.push(row);
+    }
+    
+    // Do something with the parsed data here
+    console.log(data);
+    _update(); // very important to add _update here and not anywhere else
+  };
+  
+  // Read the file as text
+  reader.readAsText(file);
+  //_update();
+  
+  //
+}
