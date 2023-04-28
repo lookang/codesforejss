@@ -1,0 +1,6 @@
+// copy into RangeCSS
+{ 
+"writing-mode": "bt-lr", /* IE */
+"-webkit-appearance": "slider-vertical", /* WebKit */
+"height": "50vh" /*in chrome is width since it is rotated*/
+}
