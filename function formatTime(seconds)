@@ -1,0 +1,31 @@
+function formatTime(seconds) {
+  var hours = Math.floor(seconds / 3600);
+  var minutes = Math.floor((seconds % 3600) / 60);
+  // add .toFixed(2) to display sec in 0.00 instead of 0.00000000000
+  var remainingSeconds = (seconds % 60).toFixed(0);
+
+  var timeString = "";
+
+  if (hours < 10) {
+    timeString += "0" + hours + ":";
+  } else {
+    timeString += hours + ":";
+  }
+
+  if (minutes < 10) {
+    timeString += "0" + minutes + ":";
+  } else {
+    timeString += minutes + ":";
+  }
+
+  if (remainingSeconds < 10) {
+    timeString += "0" + remainingSeconds;
+  } else {
+    timeString += remainingSeconds;
+  }
+
+  return timeString;
+}
+
+//expected output is
+HH:MM:SS.SS
