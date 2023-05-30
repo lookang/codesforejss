@@ -1,0 +1,37 @@
+//HTML head
+<style>
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: 1s step-start 0s infinite normal none running blink; 
+}
+</style>
+
+
+//custom
+function enableBlinking (elementId) {
+  var element = document.getElementById(elementId);
+  element.setAttribute("class", "blinking");
+}
+
+function disableBlinking (elementId) {
+  var element = document.getElementById(elementId);
+  element.removeAttribute("class");
+}
+
+
+//add anywhere needed
+window.setTimeout(() => {
+  enableBlinking("text1"); // text1 is the name of the element to blink
+}, 100);
+
+window.setTimeout(() => {
+  disableBlinking("text1");
+}, 10000);
+
+sample
+https://iwant2study.org/lookangejss/00howto/ejss_model_blink/
