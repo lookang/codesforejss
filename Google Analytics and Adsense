@@ -1,3 +1,20 @@
+// new code to GA 20230713
+
+<script 
+async="true" src="https://www.googletagmanager.com/gtag/js?id=G-S9EWRY1CPJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S9EWRY1CPJ');
+</script>
+
+<script data-ad-client="ca-pub-0121577198857509" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+// new code to GA 20230713
+
+
 // copy the code below to the HTML head
 // replace UA-3326007-19  with yor own code
 // to add async="true" 
@@ -5,13 +22,6 @@
 // https://analytics.google.com/analytics/web/#/a3326007p223003208/admin
 
 
-<script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-3326007-19"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-3326007-19');
-</script>
 
 
 //copy code for Adsense
@@ -43,3 +53,14 @@
   gtag('config', 'UA-3326007-19');
 </script>
 <script data-ad-client="ca-pub-0121577198857509" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+//older
+
+<script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-3326007-19"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-3326007-19');
+</script>
