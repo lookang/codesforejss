@@ -9,6 +9,17 @@ if (!clicked){
     });
     }
 */
+//variables declared
+clicked = 
+
+//initialisation to remember
+if (clicked==undefined){
+  
+  clicked=false;
+
+}
+
+
 // new way to make Moodle slow down to reset afrer 100 ms then run the code _reset
 if (!clicked){
   window.setTimeout(_reset,100)
