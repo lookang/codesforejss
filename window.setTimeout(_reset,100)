@@ -10,4 +10,9 @@ if (!clicked){
     }
 */
 // new way to make Moodle slow down to reset afrer 100 ms then run the code _reset
-window.setTimeout(_reset,100)
+if (!clicked){
+  window.setTimeout(_reset,100)
+  clicked=true;
+
+}
+
