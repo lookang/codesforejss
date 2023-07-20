@@ -1,0 +1,13 @@
+/*
+if (!clicked){
+  _tools.showOkDialog("Loading....click 'OK' to continue",
+    function(){ 
+    clicked=true;  
+    //_update()
+    _reset(); // to force update view
+    //clicked=true;
+    });
+    }
+*/
+// new way to make Moodle slow down to reset afrer 100 ms then run the code _reset
+window.setTimeout(_reset,100)
