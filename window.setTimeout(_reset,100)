@@ -20,9 +20,10 @@ if (clicked==undefined){
 }
 
 
-// new way to make Moodle slow down to reset afrer 100 ms then run the code _reset
+// new way to make Moodle slow down to reset afrer 500 ms then run the code _reset
+// 500 is decided after testing on moodle, as an acceptable delay
 if (!clicked){
-  window.setTimeout(_reset,100)
+  window.setTimeout(_reset,500)
   clicked=true;
 
 }
