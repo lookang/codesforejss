@@ -3,8 +3,18 @@
 
 //isQuestionAnswered = false // used in checking if Question is answered before 
 //isFirstTry = true  //used in checking if is First Try for marks award 2 instead of 1
+//clicked = // use to reset 500 ms later to force Moodle to redraw nicely on the elements
 
-//Initialisation
+//Initialisation case 1
+// new way to make Moodle slow down to reset afrer 500 ms then run the code _reset
+// 500 is decided after testing on moodle, as an acceptable delay
+if (!clicked){
+  window.setTimeout(_reset,500)
+  clicked=true;
+
+}
+
+//Initialisation case 2
 //lookang need to add this startQuestion to start immediately after game starts 
 startQuestion(`Q${correct + 1}`);
 //or
@@ -34,7 +44,7 @@ onAnswer(l_enterK1f, l_answer == l_enterK1f);
 //0.05 ❌
 //11.11 ✅
 
-
+// awardQuestionMarks use case 1
 if (isFirstTry) {
       awardQuestionMarks(2);
     } else {
@@ -43,6 +53,26 @@ if (isFirstTry) {
     }
     endQuestion(); // stamp the end of Question
     isQuestionAnswered = true; 
+
+// awardQuestionMarks use case 2
+if (once) {
+      addQuestionHistory(`$ {
+        questionNumber
+      } = $ {
+        question
+      } `); //moodle part of the history
+      once=false
+    }
+    onAnswer(coordinates,true)
+    if (isFirstTry) {
+      awardQuestionMarks(2);
+      once=true // set back to true to prepare for next q
+    }
+    else {
+      awardQuestionMarks(1);
+      isFirstTry =true //reset
+      once=true // set back to true to prepare for next q
+    }
 
 
 
