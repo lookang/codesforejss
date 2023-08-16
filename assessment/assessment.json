@@ -1,0 +1,2154 @@
+{
+    "tasks": [
+        {
+            "name": "Summary",
+            "description": "Summary",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForSummary",
+                            "data": 1
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Summary"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Summary"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForSummary"
+            }
+        },
+        {
+            "name": "Q1",
+            "description": "1. I am able to explain what it means to be a Singaporean.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ1",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ1",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ1",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ1",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ1",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ1",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q1"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q1"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ1"
+            }
+        },
+        {
+            "name": "Q2",
+            "description": "2. I have a sense of responsibility towards Singapore.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ2",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ2",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ2",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ2",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ2",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ2",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q2"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q2"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ2"
+            }
+        },
+        {
+            "name": "Q3",
+            "description": "3. I am able to suggest ways to help in my home, community and country.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ3",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ3",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ3",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ3",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ3",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ3",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q3"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q3"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ3"
+            }
+        },
+        {
+            "name": "Q4",
+            "description": "4. I believe it is important to actively participate in school and community programmes.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ4",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ4",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ4",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ4",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ4",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ4",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q4"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q4"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ4"
+            }
+        },
+        {
+            "name": "Q5",
+            "description": "5. I know how issues around the world can affect Singapore.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ5",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ5",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ5",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ5",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ5",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ5",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q5"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q5"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ5"
+            }
+        },
+        {
+            "name": "Q6",
+            "description": "6. I am aware of global issues (e.g., inequalities, global warming, food and water security).",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ6",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ6",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ6",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ6",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ6",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ6",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q6"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q6"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ6"
+            }
+        },
+        {
+            "name": "Q7",
+            "description": "7. I am able to accept the customs and practices of people from different social, cultural and religious backgrounds.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ7",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ7",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ7",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ7",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ7",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ7",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q7"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q7"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ7"
+            }
+        },
+        {
+            "name": "Q8",
+            "description": "8. I am respectful towards others who are different from me.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ8",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ8",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ8",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ8",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ8",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ8",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q8"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q8"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ8"
+            }
+        },
+        {
+            "name": "Q9",
+            "description": "9. I am able to generate ideas and explore different ways to respond to challenges.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ9",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ9",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ9",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ9",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ9",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ9",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q9"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q9"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ9"
+            }
+        },
+        {
+            "name": "Q10",
+            "description": "10. I am able to look at an issue from different perspectives.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ10",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ10",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ10",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ10",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ10",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ10",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q10"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q10"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ10"
+            }
+        },
+        {
+            "name": "Q11",
+            "description": "11. I am able to make decisions based on careful analyses of relevant information.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ11",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ11",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ11",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ11",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ11",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ11",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q11"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q11"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ11"
+            }
+        },
+        {
+            "name": "Q12",
+            "description": "12. I am able to reflect on my thoughts, attitude and actions during learning experiences.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ12",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ12",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ12",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ12",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ12",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ12",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q12"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q12"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ12"
+            }
+        },
+        {
+            "name": "Q13",
+            "description": "13. I am able to identify key areas of work in a complex task.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ13",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ13",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ13",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ13",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ13",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ13",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q13"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q13"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ13"
+            }
+        },
+        {
+            "name": "Q14",
+            "description": "14. I am able to accept perspectives that are different from me.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ14",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ14",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ14",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ14",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ14",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ14",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q14"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q14"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ14"
+            }
+        },
+        {
+            "name": "Q15",
+            "description": "15. I am able to communicate information and ideas clearly.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ15",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ15",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ15",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ15",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ15",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ15",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q15"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q15"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ15"
+            }
+        },
+        {
+            "name": "Q16",
+            "description": "16. I am able to work well in a group and contribute effectively with my members to achieve common goals.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ16",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ16",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ16",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ16",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ16",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ16",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q16"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q16"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ16"
+            }
+        },
+        {
+            "name": "Q17",
+            "description": "17. I am able to interact with others to build new knowledge, understanding and ideas.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ17",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ17",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ17",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ17",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ17",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ17",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q17"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q17"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ17"
+            }
+        },
+        {
+            "name": "Q18",
+            "description": "18. I am able to search and organise information on the internet.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ18",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ18",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ18",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ18",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ18",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ18",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q18"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q18"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ18"
+            }
+        },
+        {
+            "name": "Q19",
+            "description": "19. I understand and abide by the laws and rules (e.g., copyright) when using digital information.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ19",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ19",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ19",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ19",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ19",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ19",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q19"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q19"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ19"
+            }
+        },
+        {
+            "name": "Q20",
+            "description": "20. I am able to verify the accuracy, credibility and currency of a piece of information.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ20",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ20",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ20",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ20",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ20",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ20",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q20"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q20"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ20"
+            }
+        },
+        {
+            "name": "Q21",
+            "description": "21. I am able to determine the type of information I should or should not share online (e.g., personal and confidential information).",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ21",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ21",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ21",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ21",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ21",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ21",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q21"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q21"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ21"
+            }
+        },
+        {
+            "name": "Q22",
+            "description": "22. I share digital information responsibly as part of practising cyber wellness.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ22",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ22",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ22",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ22",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ22",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ22",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q22"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q22"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ22"
+            }
+        },
+        {
+            "name": "Q23",
+            "description": "23. I am able to exchange digital information with others concurrently (e.g., working on Google Doc at the same time) and at different times  (e.g., replying messages and emails).",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ23",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ23",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ23",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ23",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ23",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ23",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q23"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q23"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ23"
+            }
+        },
+        {
+            "name": "Q24",
+            "description": "24. I am able to use different media elements (e.g., text, images, audio, video) to convey my message effectively to my audience.",
+            "marks": [
+                {
+                    "value": "1",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ24",
+                            "data": 1
+                        }
+                    ]
+                },
+                {
+                    "value": "2",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ24",
+                            "data": 2
+                        }
+                    ]
+                },
+                {
+                    "value": "3",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ24",
+                            "data": 3
+                        }
+                    ]
+                },
+                {
+                    "value": "4",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ24",
+                            "data": 4
+                        }
+                    ]
+                },
+                {
+                    "value": "5",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ24",
+                            "data": 5
+                        }
+                    ]
+                },
+                {
+                    "value": "6",
+                    "state": [
+                        {
+                            "element": "questionLib",
+                            "property": "awardMarkForQ24",
+                            "data": 6
+                        }
+                    ]
+                }
+            ],
+            "events": {
+                "start": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionStart",
+                        "name": "Q24"
+                    }
+                },
+                "end": {
+                    "element": "questionLib",
+                    "property": "value",
+                    "data": {
+                        "action": "questionEnd",
+                        "name": "Q24"
+                    }
+                }
+            },
+            "history": {
+                "element": "questionLib",
+                "property": "historyForQ24"
+            }
+        }
+    ]
+}
