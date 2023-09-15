@@ -9,7 +9,7 @@
 // new way to make Moodle slow down to reset afrer 500 ms then run the code _reset
 // 500 is decided after testing on moodle, as an acceptable delay
 if (!clicked){
-  window.setTimeout(_reset,500)
+  window.setTimeout(_reset,1000)
   clicked=true;
 
 }
