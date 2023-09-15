@@ -74,6 +74,33 @@ if (once) {
       once=true // set back to true to prepare for next q
     }
 
+//another example is to add inside the play button
+function submitAnalytics() {
+  const modeToQn = {"elastic": "Q1", "inelastic": "Q2", "perfectly inelastic": "Q3"};
+  const qn = modeToQn[elasticityMode];
+  // m1 = mass1
+  // m2 = mass2
+  // u1 = vx1s
+  // u2 = vx2s
+  const output = `Mode: ${elasticityMode}\nm1 = ${mass1}\nm2 = ${mass2}\nu1 = ${vx1s}\nu2 = ${vx2s}`;
+  questionInstantMark(qn, output);
+}
+
+function submitAnalytics2() {
+  const modeToQn = {"elastic": "Q1", "inelastic": "Q2", "perfectly inelastic": "Q3"};
+  const qn = modeToQn[elasticityMode];
+  // m1 = mass1
+  // m2 = mass2
+  // u1 = vx1s
+  // u2 = vx2s
+  //const output = `Mode: ${elasticityMode},m1 = ${mass1},u1 = ${vx1s},m2 = ${mass2},u1 = ${vx1s},u2 = ${vx2s}`;
+  const output = `m1 = ${mass1},u1 = ${vx1s},m2 = ${mass2},u1 = ${vx1s},u2 = ${vx2s}`;
+  //questionInstantMark(qn, output);
+  startQuestion(qn);
+  addQuestionHistory(output); //moodle part of the history
+  awardQuestionMarks(1);
+  endQuestion(); // stamp the end of Question
+}
 
 
 // Assume ECMAScript 6; Chrome >=49, Edge >=14, Firefox >=41, Opera >=36, Safari >=8
