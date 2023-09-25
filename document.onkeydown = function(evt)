@@ -13,6 +13,7 @@ document.onkeydown = function(evt) {
     }
     if (isEscape) {
         //alert("Escape");
-        escKeyPressed = true
+        //escKeyPressed = true
+        escKeyPressed = !escKeyPressed; // Toggle escKeyPressed
     }
 };
