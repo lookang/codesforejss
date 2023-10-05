@@ -1,0 +1,3 @@
+ejs_root_directory = /Users/lookang/Public/EjsS_5.33/
+source_directory = /Users/lookang/Public/workspace/source/
+version = 5.33

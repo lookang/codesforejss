@@ -1,0 +1,14 @@
+JavaRoot=
+Language=Locale
+Update=ALWAYS
+LastUpdate=1696404248315
+IgnoreUpdateVersion=
+Minimized=false
+ZoomLevel=0
+UserDir=/Users/lookang/Public/workspace/
+LoadLastFile=true
+VMparams=-Xmx256m
+Arguments=
+LookAndFeel=SYSTEM
+Width=602
+Height=297
