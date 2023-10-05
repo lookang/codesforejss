@@ -1,3 +1,5 @@
+# # to use save it rename it to .Ejs.txt and save it home user directory and include the information abut where you workspace is. Both are text files, so you can edit them ’by hand’. need .EjsConsole.txt. .Ejs.txt is used by the Java version of EJS for other purposes.
+
 JavaRoot=
 Language=Locale
 Update=ALWAYS
