@@ -1,0 +1,21 @@
+function setPlaysInlineForAllVideos() {
+  const allVideos = document.querySelectorAll("video");
+  allVideos.forEach((video) => {
+    video.setAttribute("playsinline", true);
+  });
+}
+
+
+
+/*
+The purpose of the provided code is to set the "playsinline" attribute to `true` for all `<video>` elements in an HTML document. This attribute is used in web development to control the behavior of how videos are played on mobile devices, particularly on iOS devices (such as iPhones and iPads).
+Setting the "playsinline" attribute to `true` on a `<video>` element means that the video will play inline within the web page, rather than launching in a separate full-screen player or in a new tab. This can be useful in scenarios where you want more control over the video's display, such as when you want to embed a video within a web page's content and prevent it from taking over the entire screen.
+
+Here's a breakdown of the code:
+1. It defines a function named `setPlaysInlineForAllVideos()`.
+2. Inside the function, it selects all `<video>` elements on the page using the `document.querySelectorAll("video")` method, which returns a NodeList containing all the matching elements.
+3. It then uses the `forEach` method to iterate through each `<video>` element in the NodeList.
+4. For each video element, it sets the "playsinline" attribute to `true` using the `setAttribute` method. This ensures that the video will play inline within the page's content.
+
+This code is typically used to ensure that videos behave as expected on mobile devices, where the default behavior for video playback may differ from that on desktop browsers. By setting "playsinline" to `true`, you can ensure consistent and controlled video playback within your web page.
+*/
