@@ -1,0 +1,50 @@
+// example usage videoId == video41
+//var videoId
+function playSelectedVideo(videoId, isRecursed=false) {
+  // Pause all videos
+  const allVideos = document.querySelectorAll('video');
+  allVideos.forEach((video) => {
+    if (video.id !== videoId) {
+     // console.log (video.id)
+     // video41
+     video.pause();
+     // var temp = video.id
+     // _view[temp].pause();
+    }
+  });
+
+  // Play selected video
+  const selectedVideo = document.getElementById(videoId);
+  //console.log(selectedVideo);
+  
+  // Set 'autoplay' attribute to true but didnt seems to make the video autoplay
+  selectedVideo.autoplay = true;
+  
+  selectedVideo.play().catch(function(err) {
+    // Probably iOS
+    if (!isRecursed) {
+      EJSS_INTERFACE.BoxPanel.showOkDialog("Click 'OK' to continue, this is NOT a bug but an iOS requirement", 
+      function(){ 
+        playSelectedVideo(videoId,true);
+      });
+    }
+  });
+  // _view[videoId].play();
+}
+
+
+*/
+The purpose of the provided code is to play a selected video while pausing all other videos on the page. It also includes some logic to handle the "autoplay" attribute and address a specific issue with autoplay on iOS devices. Let's break down the code and its purpose:
+
+1. The code defines a function named `playSelectedVideo` which takes two parameters:
+   - `videoId`: The ID of the video that should be played.
+   - `isRecursed` (default value is `false`): A flag that indicates whether the function is being called recursively.
+2. Inside the function, it first selects all `<video>` elements on the page using `document.querySelectorAll('video')` and then iterates through each video.
+3. For each video, it checks if the video's `id` is not equal to the `videoId` passed to the function. If they are not the same, it pauses that video using `video.pause()`. This part ensures that all other videos are paused except for the one specified by `videoId`.
+4. After pausing other videos, it retrieves the video element with the specified `videoId` using `document.getElementById(videoId)`.
+5. It sets the `autoplay` attribute of the selected video to `true` (`selectedVideo.autoplay = true;`), which should theoretically make the video autoplay when it starts playing. However, note that the "autoplay" attribute might not work as expected on some platforms, especially iOS.
+6. It attempts to play the selected video using `selectedVideo.play()`. This function returns a promise, and if an error occurs during playback, it catches the error using `.catch(function(err))`.
+7. If an error occurs, and if the function has not been called recursively (`!isRecursed`), it shows a dialog box with a message about the issue and provides an option to retry playing the video. This handling is specific to iOS devices, which often have stricter autoplay policies, and the code attempts to work around these restrictions.
+
+In summary, this code is used to control the playback of videos on a web page. It ensures that when you want to play a specific video (`videoId`), all other videos are paused, and it attempts to make the selected video autoplay, with special handling for iOS devices. The recursion is used to provide a user prompt if autoplay fails on iOS, allowing the user to initiate the video playback.
+/*
