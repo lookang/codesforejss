@@ -1,9 +1,9 @@
 //Variables
 //define a variable called editable
-
+```
 editable = true // for teacher version
 editable = false // for student version
-
+```
 
 // Initialization
 //new tab called import
