@@ -7,6 +7,7 @@ editable = false // for student version
 
 // Initialization
 //new tab called import
+```
 //if (editable) { // for debugging
   if (!editable) {
     attemptLoadGraph().then(function(data) {
@@ -38,6 +39,8 @@ editable = false // for student version
 
 
   }
+```
+
 
 //Custom
 // link to external file of code
@@ -45,6 +48,7 @@ editable = false // for student version
 ./lib/jszip.js 
 
 //tab export
+```
 async function exportGraph(exportObject, filename="export.zip") {
   // Get the zipped export template
   const exportTemplatePath = "export-template.zip";
@@ -86,9 +90,10 @@ function saveBlob(blob, filename) {
     window.URL.revokeObjectURL(objectUrl);
   }, 1_000, elem, objectUrl);
 }
-
+```
 
 //tab import
+```
 //written by ryan451
 //copy to custom function of ejss
 
@@ -114,7 +119,7 @@ attemptLoadGraph().then(function(data) {
 });
 
 */
-
+```
 
 //Download simulation button
 //OnClick
@@ -125,7 +130,7 @@ attemptLoadGraph().then(function(data) {
 // at the initialisation, the ejss_model_graphUI check the records.json and loads it
 // that is the new "customisable ejss idea" - able to create new variant of ejss natively from the ejss_model_graphUI index.html itself
 
-
+```
 var records = {};
 // needs to be defined by developer
 records['startLineText'] = startLineText
@@ -149,4 +154,4 @@ records['spotshow3'] = spotshow3
 
 exportGraph(records).then(onGraphExportComplete);
 // EJSS_TOOLS.File.downloadText("records.json", JSON.stringify(records));
-  
+  ```
