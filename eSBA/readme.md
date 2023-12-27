@@ -167,3 +167,32 @@ Width = editable?"50%":"0%"
 ```
  Width = editable?"50%":"100%"
 ```
+
+//reset button
+'''
+if (editable) {
+  // user screen positionback reset
+  t= 0;
+  solventy = 0
+  spotS1disolve =0
+  for (var i=1; i<nspot /* Iterations */ ;i++) {
+  spoty[i] = spoty[0] // retrack all spots back to [0] position
+  spoty2[i] = spoty2[0]
+  spoty3[i] = spoty3[0]
+  spotyUnknown[i] = spotyUnknown[0]
+  thetaClock = 0;
+  
+  
+  
+}
+
+  
+  
+  
+  }
+  
+  else {
+    _reset();
+    }
+//speechzh ("你好");
+'''
