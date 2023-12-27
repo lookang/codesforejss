@@ -155,3 +155,9 @@ records['spotshow3'] = spotshow3
 exportGraph(records).then(onGraphExportComplete);
 // EJSS_TOOLS.File.downloadText("records.json", JSON.stringify(records));
   ```
+
+//panel containing teacherPanel
+ ```Display = editable?"inline-block":"none"
+Width = editable?"50%":"0%" ```
+//plottingPanel
+ ```Width = editable?"50%":"100%" ```
