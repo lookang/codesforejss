@@ -157,7 +157,11 @@ exportGraph(records).then(onGraphExportComplete);
   ```
 
 //panel containing teacherPanel
- ```Display = editable?"inline-block":"none"
-Width = editable?"50%":"0%" ```
+ ```
+Display = editable?"inline-block":"none"
+Width = editable?"50%":"0%"
+```
 //plottingPanel
- ```Width = editable?"50%":"100%" ```
+ ```
+ Width = editable?"50%":"100%"
+```
