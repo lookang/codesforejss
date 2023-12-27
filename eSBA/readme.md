@@ -44,8 +44,8 @@ editable = false // for student version
 
 //Custom
 // link to external file of code
--  ./lib/FileSaver.js 
-- ./lib/jszip.js 
+-   ./lib/FileSaver.js 
+-   ./lib/jszip.js 
 
 //tab export
 ```
