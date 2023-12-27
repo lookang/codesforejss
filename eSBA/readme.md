@@ -169,7 +169,7 @@ Width = editable?"50%":"0%"
 ```
 
 //reset button
-'''
+```
 if (editable) {
   // user screen positionback reset
   t= 0;
@@ -195,4 +195,4 @@ if (editable) {
     _reset();
     }
 //speechzh ("你好");
-'''
+```
