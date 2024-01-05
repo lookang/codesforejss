@@ -1,0 +1,45 @@
+// This function adds tick marks with labels to an HTML slider input element.
+// It takes two parameters: sliderId (the ID of the slider) and an array of objects with label and position properties.
+function addTicksWithLabelsToSlider(sliderId, tickData) {
+  // Find the slider element using the provided ID
+  const slider = document.getElementById(`${sliderId}.slider`);
+  
+  // Check if the slider element exists
+  if (slider === null) {
+    console.error(`Slider with ID '${sliderId}' not found.`);
+    return;
+  }
+  
+  // Generate a unique datalist ID based on the slider ID
+  const datalistId = `${sliderId}-tick-datalist`;
+  
+  // Check if the datalist element already exists
+  if (document.getElementById(datalistId)) {
+   console.warn(`Datalist with ID '${datalistId}' already exists.`);
+   return;
+  }
+  
+  // Create a datalist element
+  const datalist = document.createElement("datalist");
+  datalist.setAttribute("id", datalistId);
+  
+  // Populate the datalist with options based on the provided tickData
+  for (const tick of tickData) {
+    const option = document.createElement("option");
+    
+    // Set the value attribute of the option to the tick position
+    option.setAttribute("value", tick.position);
+    
+    // Set the label text for the option
+    option.textContent = tick.label;
+    
+    datalist.appendChild(option);
+  }
+  
+  // Set the datalist attribute of the slider
+  slider.setAttribute("list", datalist.id);
+  // Append the datalist to the document body
+  document.body.appendChild(datalist);
+}
+
+
