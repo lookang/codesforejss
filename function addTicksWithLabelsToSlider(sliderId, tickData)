@@ -42,4 +42,14 @@ function addTicksWithLabelsToSlider(sliderId, tickData) {
   document.body.appendChild(datalist);
 }
 
+// Initialisation
+// Usage example:
+const sliderId = "slider";
+const tickData = [
+  { label: "0", position: 0 },
+  { label: "1", position: 0.8 },
+  { label: "2", position: 1.6 },
+  { label: "3", position: 2.4 }
+]; // Replace with your desired labels and positions
 
+addTicksWithLabelsToSlider(sliderId, tickData);
