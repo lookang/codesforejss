@@ -64,3 +64,10 @@ function color(wavelength) {
     return "rgba(" + R + "," + G + "," + B + ",1.0)";
 }
 
+// to use put in initialization
+
+
+for (var i = 0; i < 450; i++) {
+ realSpectrumX[i] = i/100+3.8
+ fillColor[i] = color(i/100+3.8)
+}
