@@ -1,0 +1,66 @@
+/*
+function color (l) {          // where l --> x[i]
+  l=l*100;
+ if(l<380)return  "rgba(128,128,128,1.0)";    // grey
+ else if(l<450)return "rgba(255,0,255,1.0)";  // purple
+ else if(l<495)return "rgba(0,0,255,1)";      //  blue
+ else if(l<570)return "rgba(0,255,0,1)";      // green
+ else if(l<590)return "rgba(255,255,0,1)";    // yellow
+ else if(l<620)return "rgba(255,128,0,1)";    // orange
+ else if(l<750)return "rgba(255,0,0,1)";      // red
+ return "rgba(32,32,32,1)";
+}
+*/
+function color(wavelength) {
+    wavelength =wavelength*100 // to sync code by *100 as fukwun used that way
+    let gamma = 1;
+    let intensity_max = 255;
+    let factor = 0;
+    let R, G, B;
+
+    if ((wavelength >= 380) && (wavelength < 440)) {
+        R = -(wavelength - 440) / (440 - 380);
+        G = 0.0;
+        B = 1.0;
+    } else if ((wavelength >= 440) && (wavelength < 490)) {
+        R = 0.0;
+        G = (wavelength - 440) / (490 - 440);
+        B = 1.0;
+    } else if ((wavelength >= 490) && (wavelength < 510)) {
+        R = 0.0;
+        G = 1.0;
+        B = -(wavelength - 510) / (510 - 490);
+    } else if ((wavelength >= 510) && (wavelength < 580)) {
+        R = (wavelength - 510) / (580 - 510);
+        G = 1.0;
+        B = 0.0;
+    } else if ((wavelength >= 580) && (wavelength < 645)) {
+        R = 1.0;
+        G = -(wavelength - 645) / (645 - 580);
+        B = 0.0;
+    } else if ((wavelength >= 645) && (wavelength <= 750)) {
+        R = 1.0;
+        G = 0.0;
+        B = 0.0;
+    } else {
+        R = 0.0;
+        G = 0.0;
+        B = 0.0;
+    }
+
+    // Adjust intensity
+    if ((wavelength >= 380) && (wavelength < 420)) {
+        factor = 0.3 + 0.7 * (wavelength - 380) / (420 - 380);
+    } else if ((wavelength >= 645) && (wavelength <= 750)) {
+        factor = 0.3 + 0.7 * (750 - wavelength) / (750 - 645);
+    } else {
+        factor = 1.0;
+    }
+
+    R = Math.round(intensity_max * Math.pow(R * factor, gamma));
+    G = Math.round(intensity_max * Math.pow(G * factor, gamma));
+    B = Math.round(intensity_max * Math.pow(B * factor, gamma));
+
+    return "rgba(" + R + "," + G + "," + B + ",1.0)";
+}
+
