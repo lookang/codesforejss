@@ -9,3 +9,14 @@ copy this inside the file ttf_fonts.css
   src: url('digital-7/digital-7_mono.ttf');
 }
 '''
+
+
+copy contents of led_digital_7 from https://www.fontget.com/font/led-digital-7-family/
+inside a folder called digital-7
+
+in Information - EJSS Run options - CSS Files: add the folder ./font/ttf_fonts.css
+User files: add ./font/
+
+In Variables defined
+fontdigitalmonosmall = "normal normal 3vw led_digital_7_mono"
+fontdigitalmono = "normal normal 7vw led_digital_7_mono"
