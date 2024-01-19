@@ -1,0 +1,11 @@
+create a folder called font
+
+inside this folder create a file called ttf_fonts.css
+copy this inside the file ttf_fonts.css
+
+'''
+@font-face{
+  font-family: 'led_digital_7_mono';
+  src: url('digital-7/digital-7_mono.ttf');
+}
+'''
