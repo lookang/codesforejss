@@ -14,7 +14,8 @@ copy this inside the file ttf_fonts.css
 copy contents of led_digital_7 from https://www.fontget.com/font/led-digital-7-family/
 inside a folder called digital-7
 
-in Information - EJSS Run options - CSS Files: add the folder ./font/ttf_fonts.css
+define a file for css.
+in Information (top right corner)- EJSS Run options (2nd tab) - CSS Files: add the folder ./font/ttf_fonts.css
 User files: add ./font/
 
 In Variables defined
