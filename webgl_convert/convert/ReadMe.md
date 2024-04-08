@@ -70,3 +70,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Example of WebGL 3D
 -  https://iwant2study.org/ospsg/index.php/interactive-resources/physics/01-foundations-of-physics/energy-fields/07-energy-work-power/1191-solar-panels-and-tilt-angle-optimization
 -  https://iwant2study.org/ospsg/index.php/interactive-resources/mathematics/measurement-and-geometry/geometry/2-3d-shapes/438-glimbal8wee02-1
+
+-  ## Other Documentation
+-  https://iwant2study.org/ospsg/index.php/translations/440-how-to-generate-javascript-3d-for-use-in-open-source-physics
