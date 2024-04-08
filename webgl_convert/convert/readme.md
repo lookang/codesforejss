@@ -67,6 +67,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - This tool was developed as part of the larger [codesforejss](https://github.com/lookang/codesforejss) project, aimed at providing educational resources in physics and 3D simulations.
 
----
-
-Please adjust the `README.md` according to the actual features, usage, and configuration of the WebGL Convert Tool as necessary. If the tool supports additional options or has dependencies, consider adding those sections to the documentation as well.
+## Example of WebGL 3D
+https://iwant2study.org/ospsg/index.php/interactive-resources/physics/01-foundations-of-physics/energy-fields/07-energy-work-power/1191-solar-panels-and-tilt-angle-optimization
+https://iwant2study.org/ospsg/index.php/interactive-resources/mathematics/measurement-and-geometry/geometry/2-3d-shapes/438-glimbal8wee02-1
