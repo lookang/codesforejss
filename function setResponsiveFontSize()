@@ -1,0 +1,18 @@
+function setResponsiveFontSize() {
+    // Get the viewport dimensions
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    var percent = 0.03
+    // Calculate the font size based on viewport width or height
+    var fontSize = Math.min(viewportWidth * percent, viewportHeight * percent); // Adjust the multiplier as needed
+
+    // Set the font size
+    font = "normal normal " + fontSize + "px"; // You can use px or other units as needed
+
+    // Apply the font size to your elements
+    // For example, you can apply it to a specific element with a class
+    //document.getElementById("yourElementId").style.font = font;
+}
+
+// paste inside plottingPanel - OnResize and OnOrientationChange
+setResponsiveFontSize()
