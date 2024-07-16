@@ -1,0 +1,66 @@
+how to create a javascript color picker
+
+go to initialisation page and add the code
+function toggleInputType(id) {
+    var input = document.getElementById(id);
+    input.type = 'color';
+}
+
+// Change input type
+toggleInputType('picker');
+
+
+
+rename the element textfield to be named picker
+
+
+in the apply button
+polColor = document.getElementById('picker').value;
+
+in the htmlview, select the color to be polcolor
+
+
+
+sample
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker Example</title>
+    <style>
+        #colorDisplay {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Text input renamed to 'picker' -->
+    <input type="text" id="picker" value="#000000">
+
+    <!-- Apply button -->
+    <button id="applyButton">Apply Color</button>
+
+    <!-- Element to display the selected color -->
+    <div id="colorDisplay"></div>
+
+    <script>
+        // Function to toggle input type to 'color'
+        function toggleInputType(id) {
+            var input = document.getElementById(id);
+            input.type = 'color';
+        }
+
+        // Initialize the color picker
+        toggleInputType('picker');
+
+        // Apply the selected color
+        document.getElementById('applyButton').addEventListener('click', function() {
+            var polColor = document.getElementById('picker').value;
+            document.getElementById('colorDisplay').style.backgroundColor = polColor;
+        });
+    </script>
+</body>
+</html>
