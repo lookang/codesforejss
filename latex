@@ -1,0 +1,64 @@
+Here is an improved writeup for the documentation on GitHub regarding the inclusion and initialization of MathJax for rendering mathematical formulas in HTML panels.
+
+## Adding MathJax for Rendering Mathematical Formulas
+
+### Using CDN for MathJax
+
+To include MathJax in your HTML page using a CDN, add the following script to the `<head>` section of your HTML document:
+
+```html
+<head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+```
+
+### Using a Local Copy of MathJax
+
+If you prefer to use a local copy of MathJax, make sure you have MathJax downloaded and added as an element stored in your project directory. 
+
+### Initializing MathJax
+
+After including MathJax, initialize it by adding the following script. This script ensures that MathJax processes and renders the mathematical formulas correctly:
+
+```javascript
+// Initialization
+MathJax.typesetPromise();
+```
+
+### Example: Adding a Math Formula to a Panel
+
+If you have a panel in your HTML where you want to display a mathematical formula, you can use the following approach. Here is an example of an HTML element with a math formula:
+
+```html
+<div id="math-panel">
+    Math formula: $$\int_{a}^{b} f(x) \, dx$$
+</div>
+```
+
+### Full Example
+
+Combining all the above steps, here is the complete example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathJax Example</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div id="math-panel">
+        Math formula: $$\int_{a}^{b} f(x) \, dx$$
+    </div>
+
+    <script>
+        // Initialization
+        MathJax.typesetPromise();
+    </script>
+</body>
+</html>
+```
+
+By following these steps, you can easily include and initialize MathJax to render mathematical formulas in your HTML documents.
