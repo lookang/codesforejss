@@ -15,6 +15,12 @@ document.getElementById(".myBoxPanelOk").style.top = "0px";
 firsttime2=false; // turn off and remembers due to undefined
 }
 
+
+//from paco to fix xhtml
+_tools.showOkDialog("<div style=' font-family: Helvetica, Arial, sans-serif'><h2>Instructions</h2><p>The interface of this simulation contains three panels:</p><ol>    <li>Left Panel: Displays the profit level</li>    <li>Middle Panel: Shows the set of revenue and cost curves</li>    <li>Right Panel: Control panel for adjusting parameters and view</li></ol><h3>Graph Panel (Middle)</h3><ul>    <li>Each revenue/cost curve is colour-coded and labelled</li>  <li>Colour legend is located below the panel</li>  <li>Labels can be repositioned by clicking on and dragging them</li>    <li>Profit is visualised by rectangles: Blue for supernormal; Orange for subnormal</li></ul><h3>Control Panel (Right)</h3><p>Adjust cost and revenue parameters and viewing options using buttons and sliders. Hover over each control to view its specific function.</p></div>");
+
+
+
 // simple line <b> bold, <br/> next line
 _tools.showOkDialog("<b>Choose the Metal and Non-metal for the ionic compound. <br/><br/> Then refer the Periodic Table below to determine the number of electrons in the atoms⚛.</b>");
 
