@@ -10,3 +10,7 @@
 //[[angle,x axis,0,0],[angle Y,0,axis y,0],[angle Z,0,0,axis Z]]
 [[0,1,0,0],[pi/2,0,1,0],[0,0,0,1]]
 
+// in 3D sets
+for (var i=0; i<x.length; i++) {
+  transform[i] = [[-azimuth*Math.PI/180.0,x axis,y axis,z axis]];
+}
