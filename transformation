@@ -12,5 +12,5 @@
 
 // in 3D sets
 for (var i=0; i<x.length; i++) {
-  transform[i] = [[-azimuth*Math.PI/180.0,x axis,y axis,z axis, position x, position y, position z]];
+  transform[i] = [[angleinRadian,x axis,y axis,z axis, position x, position y, position z]];
 }
