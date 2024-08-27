@@ -1,0 +1,39 @@
+// *** No need to edit this page
+
+// Must be called from an Initializationpage to make
+// the game responsive to keyboard events
+function initializeKeyboardEvents() {
+  // keyboard press down event
+  window.onkeydown = function(event) {
+    var char = getKey(event || window.event);
+    console.log ("You pressed char="+char);
+    if (running) {
+      switch(char) {
+        case 37 : moveSpriteTo(LEFT_MOVE);  event.preventDefault(); event.stopPropagation(); break;
+        case 38 : moveSpriteTo(UP_MOVE);    event.preventDefault(); event.stopPropagation(); break;
+        case 39 : moveSpriteTo(RIGHT_MOVE); event.preventDefault(); event.stopPropagation(); break;
+        case 40 : moveSpriteTo(DOWN_MOVE);  event.preventDefault(); event.stopPropagation(); break;
+      }
+    }
+    return _isPaused;
+  };
+}
+
+// get character; event.type must be keypress
+// this is used for the keyboard control
+function getCharKey(event) {
+  if (event.which === null) {
+    return event.keyCode; // IE
+  } else if (event.which!==0 && event.charCode!==0) {
+    return event.which;   // other browsers
+  } else {
+    return -1; // special key
+  }
+}
+
+// get character; event.type must be keydown
+// this is used for the keyboard control
+// and allows for pressing down arrows
+function getKey(event) {
+  return event.keyCode; // IE
+}
