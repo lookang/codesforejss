@@ -1,4 +1,7 @@
+// add toggleFullScreen() to onDoubleclick of plottingPanel
+
 /*jslint browser:true */
+// copy to custom function
 function toggleFullScreen() {
   try {
     const doc = document.documentElement;
@@ -55,7 +58,7 @@ window.addEventListener("orientationchange", () => {
 
 
 
-
+older versions
 
 //updated to address Firefox
 //https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
