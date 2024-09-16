@@ -1,3 +1,62 @@
+/*jslint browser:true */
+function toggleFullScreen() {
+  try {
+    const doc = document.documentElement;
+    
+    // Check if any fullscreen element exists
+    const isFullScreen = document.fullscreenElement || 
+                         document.mozFullScreenElement || 
+                         document.webkitFullscreenElement || 
+                         document.msFullscreenElement;
+
+    if (!isFullScreen) {
+      // Request full-screen mode based on the browser
+      if (doc.requestFullscreen) {
+        doc.requestFullscreen();
+      } else if (doc.msRequestFullscreen) {
+        doc.msRequestFullscreen();
+      } else if (doc.mozRequestFullScreen) {
+        doc.mozRequestFullScreen();
+      } else if (doc.webkitRequestFullscreen) {
+        doc.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT); // Pass input permission for older WebKit
+      }
+    } else {
+      // Exit full-screen mode based on the browser
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  } catch (e) {
+    console.error("Error toggling full-screen mode:", e);
+  }
+}
+
+// Handle screen orientation for mobile devices (optional)
+window.addEventListener("orientationchange", () => {
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('landscape').catch(err => console.warn('Failed to lock orientation:', err));
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //updated to address Firefox
 //https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
 // does not work for iOS 
