@@ -1,3 +1,4 @@
+// TL msg
 if (_isMobile){
   //do nothing
   }
@@ -5,11 +6,11 @@ if (_isMobile){
   else{
     // copy this into the initialization
 // make the font bigger
+var FONT = "1.5vw"
+_view.plottingPanel.getMessageDecoration("TL").getFont().setFontSize(FONT);
+_view.plottingPanel.getMessageDecoration("TR").getFont().setFontSize(FONT);
+_view.plottingPanel.getMessageDecoration("BL").getFont().setFontSize(FONT);
+_view.plottingPanel.getMessageDecoration("BR").getFont().setFontSize(FONT);
 
-_view.plottingPanel.getMessageDecoration("TL").getFont().setFontSize("1vw");
-_view.plottingPanel.getMessageDecoration("TR").getFont().setFontSize("1vw");
-_view.plottingPanel.getMessageDecoration("BL").getFont().setFontSize("1vw");
-_view.plottingPanel.getMessageDecoration("BR").getFont().setFontSize("1vw");
-
-_view.plottingPanel.getMessageDecoration("TL").getStyle().setFillColor("red");
+//_view.plottingPanel.getMessageDecoration("TL").getStyle().setFillColor("red");
     }
