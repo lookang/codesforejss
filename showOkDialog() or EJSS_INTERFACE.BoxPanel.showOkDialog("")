@@ -11,7 +11,13 @@ document.getElementById(".myBoxPanelOk").style.fontSize = "2vw";
 document.getElementById(".myBoxPanelOk").style.color = "Black";
 document.getElementById(".myBoxPanelOk").style.width = "500px";
 document.getElementById(".myBoxPanelOk").style.left = "40%";
-document.getElementById(".myBoxPanelOk").style.top = "0px";
+document.getElementById(".myBoxPanelOk").style.top = "20%";
+document.getElementById(".myBoxPanelOk").style.textAlign = "justify"; // Justify text
+document.getElementById(".myBoxPanelOk").style.display = "flex";
+document.getElementById(".myBoxPanelOk").style.flexDirection = "column";
+document.getElementById(".myBoxPanelOk").style.justifyContent = "center"; // Center vertically
+document.getElementById(".myBoxPanelOk").style.alignItems = "center"; // Center horizontally
+    
 firsttime2=false; // turn off and remembers due to undefined
 }
 
