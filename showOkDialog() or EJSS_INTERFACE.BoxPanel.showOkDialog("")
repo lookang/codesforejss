@@ -9,8 +9,8 @@ if (firsttime2==true){ // run first time, used together with the codes from unde
 // _tools.showOkDialog();
 document.getElementById(".myBoxPanelOk").style.fontSize = "2vw";
 document.getElementById(".myBoxPanelOk").style.color = "Black";
-document.getElementById(".myBoxPanelOk").style.width = "500px";
-document.getElementById(".myBoxPanelOk").style.left = "40%";
+document.getElementById(".myBoxPanelOk").style.width = "70%";
+document.getElementById(".myBoxPanelOk").style.left = "30%";
 document.getElementById(".myBoxPanelOk").style.top = "20%";
 document.getElementById(".myBoxPanelOk").style.textAlign = "justify"; // Justify text
 document.getElementById(".myBoxPanelOk").style.display = "flex";
